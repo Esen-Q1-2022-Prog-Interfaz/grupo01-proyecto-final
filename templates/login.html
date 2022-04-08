@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Login{% endblock %}
+{% block contents %}
+<h1>Login
+</h1>
+<br>
+<form action="{{ url_for('auth.login') }}" method="post">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }}
+    {{ form.username }}
+    {{ form.password.label }}
+    {{ form.password }}
+    {{ form.submit }}
+</form>
+<br>
+<a href="{{ url_for('auth.register') }}">Register</a>
+{% endblock %}
