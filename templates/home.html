@@ -1,8 +1,15 @@
 {% extends 'layout.html' %}
 {% block title %}Welcome AVJ{% endblock %}
+<body>
+
+
+
 {% block contents %}
+<section class="logs">
 <h1>Welcome to American Vape Juice</h1>
 <br>
 <a href="{{ url_for('auth.login') }}">Login here</a><br>
 <a href="{{ url_for('auth.register') }}">Register here</a><br>
+</section>
 {% endblock %}
+</body>
