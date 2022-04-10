@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>American Vape Juice</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -14,14 +17,21 @@
 <body>
 
     <!-- top nav bar -->
-   <header>
+    <header>
         <div class="container_nav">
-            <h2><span>El Salvador</span></h2>
+            
+            <a class="navbar-brand" href="/">
+                <div class="logo-image">
+                    <img src="http://www.americanvapejuice.com/wp-content/uploads/2021/06/cropped-Untitled-design-2-110x110.png" 
+                    class="img-fluid">
+                </div>
+            </a>
             <nav>
-                    <a href="#Home">Home</a>
-                    <a href="#Places">Places</a>
-                    <a href="#gallery">Contact Us</a>
-                    <a href="#">About</a>
+                    <a href="#">Inicio</a>
+                    <a href="#">Contáctanos</a>
+                    <a href="#">Catálogo</a>
+                    <a href="#">Carrito</a>
+                    <a href="#">Login</a>
             </nav>
         </div>
     </header>

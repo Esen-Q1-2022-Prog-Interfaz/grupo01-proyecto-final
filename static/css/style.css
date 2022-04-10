@@ -1,10 +1,10 @@
-
-
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color:black;
 }
 
 header{
@@ -13,8 +13,22 @@ header{
     left: 0;
     right: 0;    
     z-index: 99;
-    background-color: #2766c5;
+    background-color: black;
+}
 
+nav{
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns:  repeat(5, auto);
+    font-weight: 600;
+    align-items: center;
+    background-color: black;
+}
+
+nav a:hover{
+    color: aqua;
+    transition: all 0.5s;
+    
 }
 
 .container_nav {
@@ -30,14 +44,14 @@ header{
 
     position: relative;
     color:white;
+    background-color: black;
 }
 
-nav{
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns:  repeat(4, auto);
-    font-weight: 600;
-    align-items: center;
+.logo-image img{
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-top: -6px;
 }
 
 h2{
@@ -46,8 +60,79 @@ h2{
     font-weight: 700;
 }
 
-.logs{
-    color: red;
-    margin-top: 40px;
+a{
+    color: white;
+    font-size:30px;
+    text-decoration: none;
+    background-color: inherit;
+}
 
+p{
+    background-color: inherit;
+}
+
+.banner{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    background-image: url("https://media.istockphoto.com/photos/vaping-eliquid-from-an-electronic-cigarette-picture-id1199485567?k=20&m=1199485567&s=170667a&w=0&h=AFgGPV0J52DlciAOshrbOVpcJY0D8-SzQIoazuOTEos=");
+    background-position: center left;
+    background-size: cover;
+
+    font-size: 35px;
+    color: #fff;
+    background-color: black;
+}
+
+.h1ban{
+    font-size: 72px;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    background-color: inherit;
+}
+
+.h3ban{
+    font-size: 36px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 25px;
+    background-color: inherit;
+}
+
+.banner:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgb(22, 33, 43);
+    opacity: 0.5;  
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 125px;
+    padding-right: 125px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
+span1{
+    color: aqua;
+    background-color: inherit;
+}
+
+span2{
+    font-weight: bold;
+    color: red;
+    background-color: inherit;
 }
