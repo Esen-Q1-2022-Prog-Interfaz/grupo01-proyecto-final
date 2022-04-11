@@ -140,14 +140,12 @@ span1{
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
+    top: -130px;
     text-align: center;
     width: 100%;
     z-index: 1;
     background-color: transparent;
 }   
-.container h1{
-    background-color: inherit;
-}
 
 .container_form h1{
     background-color: inherit;
@@ -159,6 +157,7 @@ span1{
 form{
     background-color: transparent;
     font-size:30px;
+    border-style: none;
 }
 
 form label{
@@ -204,7 +203,9 @@ div.contenedor{
 div.itemCarrusel{
     z-index: 1;
     height: 400px;
+    width: 50%;
     position: relative;
+    left: 25%;
 }
 
 div.tarjeta{
@@ -221,6 +222,7 @@ div.flecha{
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    background-color: transparent;
 }
 
 img{

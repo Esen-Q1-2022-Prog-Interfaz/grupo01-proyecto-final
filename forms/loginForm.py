@@ -9,7 +9,7 @@ class LoginForm(FlaskForm):
             InputRequired(),
             Length(min=4, max=20),
         ],
-        render_kw={"placeholder": "username"},
+        render_kw={"placeholder": "Username"},
     )
 
     password = PasswordField(
@@ -17,7 +17,7 @@ class LoginForm(FlaskForm):
             InputRequired(),
             Length(min=4, max=20),
         ],
-        render_kw={"placeholder": "password"},
+        render_kw={"placeholder": "Password"},
     )
 
-    submit = SubmitField("login")
+    submit = SubmitField("Login")
