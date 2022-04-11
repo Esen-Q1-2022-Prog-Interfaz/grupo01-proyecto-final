@@ -136,3 +136,17 @@ span1{
     visibility: hidden;
 }
 
+<<<<<<< HEAD
+=======
+.container h1{
+    background-color: transparent;
+}
+
+form{
+    background-color: transparent;
+}
+
+form label{
+    background-color: transparent;
+}
+>>>>>>> f7381823d5c150b5d1fef6550a66a07546051b2f
