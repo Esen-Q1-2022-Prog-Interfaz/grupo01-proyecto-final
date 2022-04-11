@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
-    background-color:black;
+    background-color: black;
     color: white;
 }
 
@@ -116,7 +116,7 @@ p{
     opacity: 0.5;  
 }
 
-.container {
+.container{
     max-width: 1600px;
     margin: 0 auto;
     padding-left: 125px;
@@ -132,21 +132,107 @@ span1{
     background-color: inherit;
 }
 
-.invisible{
+.invisible_login{
     visibility: hidden;
 }
 
-<<<<<<< HEAD
-=======
-.container h1{
+.container_form{
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
     background-color: transparent;
+}
+
+.container_form h1{
+    background-color: transparent;
+    font-size: 45px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 form{
     background-color: transparent;
+    font-size:30px;
 }
 
 form label{
     background-color: transparent;
+    padding: 10px;
 }
->>>>>>> f7381823d5c150b5d1fef6550a66a07546051b2f
+
+input, textarea, select, button {
+    width : 150px;
+    margin: 0;
+    padding: 2px;
+    font-size: 25px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+
+.container_form p{
+    font-family: 'Roboto', sans-serif;
+    font-size:30px;
+    padding: 15px;
+}
+
+.container_form p a{
+    font-size: 28px;
+    color:aqua;
+}
+
+.container_form p a:hover{
+    color: #B0B0B0;
+}
+
+div.contenedor{
+    z-index: 1;
+    margin-left: 400px;
+    margin-right: 400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+div.itemCarrusel{
+    z-index: 1;
+    height: 400px;
+    position: relative;
+}
+
+div.tarjeta{
+    z-index: 1;
+    height: 100%;
+}
+
+div.flecha{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img{
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+a i{
+    color: #546666;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 500px;
+}
+
+a i:hover{
+    color: #C7D8D8;
+}
