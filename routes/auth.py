@@ -59,3 +59,8 @@ def logout():
 def dashboard():
     print(f"current_user: {current_user}")
     return render_template("dashboard.html", user=current_user)
+
+@auth.route("/catalogo")
+@login_required
+def catalogo():
+    return render_template("page/catalogo.html")

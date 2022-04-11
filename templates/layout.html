@@ -30,7 +30,7 @@
             <nav>
                     <a href="#">Inicio</a>
                     <a href="#">Contáctanos</a>
-                    <a href="#">Catálogo</a>
+                    <a href="page/catalogo.html">Catálogo</a>
                     <a href="#">Carrito</a>
                     <a href="#" class="invisible">Lokin</a>
             </nav>
@@ -51,7 +51,7 @@
             <nav>
                     <a href="{{(url_for("auth.home"))}}">Inicio</a>
                     <a href="#">Contáctanos</a>
-                    <a href="#">Catálogo</a>
+                    <a href="{{(url_for("auth.catalogo"))}}">Catálogo</a>
                     <a href="#">Carrito</a>
                     {% if current_user.username %} <a href="{{ url_for('auth.logout') }}">Logout</a> {% else %} <a href="{{ url_for('auth.login') }}">Login</a> {% endif %}
             </nav>
