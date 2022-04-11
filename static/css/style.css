@@ -135,3 +135,15 @@ span1{
 .invisible{
     visibility: hidden;
 }
+
+.container h1{
+    background-color: transparent;
+}
+
+form{
+    background-color: transparent;
+}
+
+form label{
+    background-color: transparent;
+}
