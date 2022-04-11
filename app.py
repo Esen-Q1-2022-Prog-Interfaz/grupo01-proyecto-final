@@ -7,6 +7,7 @@ from flask_migrate import Migrate
 from db.loginManagerService import login_manager
 from db.db import db
 from routes.admin import admin
+from routes.orders import orders
 
 # from routes.orders import orders
 # from routes.orderdetails import orderDetails
@@ -22,5 +23,5 @@ Migrate(app, db)
 
 app.register_blueprint(auth)
 app.register_blueprint(admin)
-# app.register_blueprint(orders)
+app.register_blueprint(orders)
 # app.register_blueprint(orderDetails)
