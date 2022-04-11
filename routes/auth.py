@@ -9,6 +9,7 @@ from db.db import db
 auth = Blueprint("auth", __name__)
 
 
+
 @auth.route("/")
 def home():
     return render_template("home.html")
@@ -20,11 +21,13 @@ def login():
     if form.validate_on_submit():
         username = form.username.data
         password = form.password.data
+        global current_user
         currentUser = User.query.filter_by(username=username).first()
         if currentUser:
             if bcrypt.check_password_hash(currentUser.password, password):
+
                 login_user(currentUser)
-                return redirect(url_for('page.home'))
+                return redirect(url_for("auth.home"))
     return render_template("login.html", form=form)
 
 
@@ -45,7 +48,7 @@ def register():
 @auth.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for("auth.login"))
+    return redirect(url_for("auth.home"))
 
 
 @auth.route("/dashboard")

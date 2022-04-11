@@ -15,9 +15,8 @@
 </head>
 
 <body>
-
     <!-- top nav bar -->
-    <header>
+    <header2>
         <div class="container_nav">
             
             <a class="navbar-brand" href="/">
@@ -31,7 +30,28 @@
                     <a href="#">Contáctanos</a>
                     <a href="#">Catálogo</a>
                     <a href="#">Carrito</a>
-                    <a href="#">Login</a>
+                    <a href="#" class="invis">Login</a>
+            </nav>
+        </div>
+    </header>
+    <!-- top nav bar -->
+
+    <!-- top nav bar -->
+    <header>
+        <div class="container_nav">
+            
+            <a class="navbar-brand" href="/">
+                <div class="logo-image">
+                    <img src="http://www.americanvapejuice.com/wp-content/uploads/2021/06/cropped-Untitled-design-2-110x110.png" 
+                    class="img-fluid">
+                </div>
+            </a>
+            <nav>
+                    <a href="{{(url_for("page.home"))}}">Inicio</a>
+                    <a href="#">Contáctanos</a>
+                    <a href="#">Catálogo</a>
+                    <a href="#">Carrito</a>
+                    {% if current_user.username %} <a href="{{ url_for('auth.logout') }}">Logout</a> {% else %} <a href="{{ url_for('auth.login') }}">Login</a> {% endif %}
             </nav>
         </div>
     </header>
