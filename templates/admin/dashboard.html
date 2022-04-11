@@ -1,0 +1,19 @@
+    {% extends 'layout_dash.html' %}
+    {% block title %}Welcome AVJ{% endblock %}
+    {% block contents %}
+
+<body>
+    <main>
+        <section id='Home' class="banner">
+            <div class="container">
+                <h1  class="h1ban">
+                    <p>Dashboard</p>
+                </h1>
+
+                <h3 class="h3ban">Welcome to your dashboard, {{current_user.username}}.</h3>
+            </div>
+        </section>
+    </main>
+    
+    {% endblock %}
+</body>
