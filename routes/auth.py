@@ -5,6 +5,7 @@ from forms.loginForm import LoginForm
 from db.bcryptService import bcrypt
 from models.user import User
 from db.db import db
+from routes.admin import admin
 
 auth = Blueprint("auth", __name__)
 
@@ -25,9 +26,11 @@ def login():
         currentUser = User.query.filter_by(username=username).first()
         if currentUser:
             if bcrypt.check_password_hash(currentUser.password, password):
-
                 login_user(currentUser)
-                return redirect(url_for("auth.home"))
+                if currentUser.rank == 'admin':
+                    return render_template("admin/dashboard.html")
+                else:
+                    return redirect(url_for("auth.home"))
     return render_template("login.html", form=form)
 
 
