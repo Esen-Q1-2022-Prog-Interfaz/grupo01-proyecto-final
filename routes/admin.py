@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for
 from flask_login import current_user, login_required
 from forms.catalogoform import CatalogoForm
+
 from models.catalogo import Catalogo
 from db.db import db
 
@@ -17,12 +18,14 @@ def home():
 def create():
     form = CatalogoForm()
     if form.validate_on_submit():
-        comprador = form.comprador.data
-        vendedor = form.vendedor.data
-        impuesto = form.impuesto.data
-        descuento = form.descuento.data
-        newOrder = Order(comprador, vendedor, impuesto, descuento)
-        db.session.add(newOrder)
+        sabor = form.sabor.data
+        descripcion = form.descripcion.data
+        base = form.base.data
+        tamaño = form.tamaño.data
+        nic = form.nic.data
+        stock = form.stock.data
+        newProduct = Catalogo(sabor, descripcion, base, tamaño, nic, stock)
+        db.session.add(newProduct)
         db.session.commit()
-        return redirect(url_for("orders.home"))
-    return render_template("orders/create.html", form=form)
+        return redirect(url_for("admin.create"))
+    return render_template("admin/catalogo.html", form=form)

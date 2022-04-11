@@ -3,12 +3,12 @@ from flask_login import login_user, login_required, logout_user, current_user
 from forms.registerForm import RegisterForm
 from forms.loginForm import LoginForm
 from db.bcryptService import bcrypt
+
 from models.user import User
 from db.db import db
 from routes.admin import admin
 
 auth = Blueprint("auth", __name__)
-
 
 
 @auth.route("/")
@@ -28,7 +28,7 @@ def login():
             if bcrypt.check_password_hash(currentUser.password, password):
                 login_user(currentUser)
                 if currentUser.rank == 'admin':
-                    return render_template("admin/dashboard.html")
+                    return redirect(url_for("admin.home"))
                 else:
                     return redirect(url_for("auth.home"))
     return render_template("login.html", form=form)
