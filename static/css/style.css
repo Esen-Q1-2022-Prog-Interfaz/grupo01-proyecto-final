@@ -143,13 +143,14 @@ span1{
     text-align: center;
     width: 100%;
     z-index: 1;
+    background-color: transparent;
 }   
 .container h1{
-    background-color: transparent;
+    background-color: inherit;
 }
 
 .container_form h1{
-    background-color: transparent;
+    background-color: inherit;
     font-size: 45px;
     padding-bottom: 10px;
     font-family: 'Roboto', sans-serif;
