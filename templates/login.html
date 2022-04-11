@@ -1,17 +1,22 @@
 {% extends 'layout.html' %}
 {% block title %}Login - AVJ{% endblock %}
 {% block contents %}
-<h1>Login</h1>
+
     <link rel="icon" href="static/css/favicon.ico">
 <br>
-<form action="{{ url_for('auth.login') }}" method="post">
-    {{ form.hidden_tag() }}
-    {{ form.username.label }}
-    {{ form.username }}
-    {{ form.password.label }}
-    {{ form.password }}
-    {{ form.submit }}
-</form>
+<section id='Home' class="banner">
+    <div class="container">
+        <h1>Login</h1>
+        <form action="{{ url_for('auth.login') }}" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }}
+            {{ form.username }}
+            {{ form.password.label }}
+            {{ form.password }}
+            {{ form.submit }}
+        </form>
+    </div>
+</section>
 <br>
 <a href="{{ url_for('auth.register') }}">Register</a>
 {% endblock %}
