@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block title %}Catálogo - AVJ{% endblock %}
+{% block contents %}
+
+    <link rel="icon" href="static/css/favicon.ico">
+<section id='Home' class="banner">
+    <div class="container_form">
+        <h1>Editar Catálogo</h1>
+        <form action="{{ url_for('admin.create') }}" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.sabor.label }}
+            {{ form.sabor }}
+            <br>
+            {{ form.descripcion.label }}
+            {{ form.descripcion }}
+            <br>
+            {{ form.base.label }}
+            {{ form.base }}
+            <br>
+            {{ form.tamaño.label }}
+            {{ form.tamaño }}
+            <br>
+            {{ form.nic.label }}
+            {{ form.nic }}
+            <br>
+            {{ form.stock.label }}
+            {{ form.stock }}
+            <br>
+            {{ form.submit }}
+            <br>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

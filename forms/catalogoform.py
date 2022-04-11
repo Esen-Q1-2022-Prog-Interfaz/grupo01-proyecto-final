@@ -27,3 +27,5 @@ class CatalogoForm(FlaskForm):
     stock = IntegerField(
         validators=[InputRequired()],
         render_kw={'placeholder':'Stock'})
+
+    submit = SubmitField("Añadir")
