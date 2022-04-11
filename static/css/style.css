@@ -136,6 +136,7 @@ span1{
     visibility: hidden;
 }
 
+<<<<<<< HEAD
 .container_form{
     max-width: 1600px;
     margin: 0 auto;
@@ -143,6 +144,9 @@ span1{
     text-align: center;
     width: 100%;
     z-index: 1;
+=======
+.container h1{
+>>>>>>> 40b6c2e7aa485365b0efa67f2b02d5cbecf61e50
     background-color: transparent;
 }
 
@@ -163,6 +167,7 @@ form label{
     padding: 10px;
 }
 
+<<<<<<< HEAD
 input, textarea, select, button {
     width : 150px;
     margin: 0;
@@ -236,3 +241,61 @@ a i{
 a i:hover{
     color: #C7D8D8;
 }
+=======
+.companytitulo h3{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.aboutus{
+    align-items: center;
+}
+
+.font{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.containercard{
+    
+    align-items: center;
+    justify-content: center;
+    height: 275px;
+    background: black;
+    padding-left: 200px;
+    padding-bottom: 0%;
+}
+  
+.card-container{
+    align-items: center;
+    height: auto;
+    background: black;
+    border-radius: 2px;
+    display: flex;
+}
+
+.fotoabout{
+    border-right: 2px solid white;
+}
+.descripcion{
+    background: black;
+    line-height: 25px;
+    width: 300px;
+    padding-left: 20px;
+}
+
+.descripcion p{
+    font-size: 20px;
+    text-align: justify;
+}
+  
+.fotoabout img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    padding-right: 20px;
+  }
+
+>>>>>>> 40b6c2e7aa485365b0efa67f2b02d5cbecf61e50
