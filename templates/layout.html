@@ -50,7 +50,7 @@
             </a>
             <nav>
                     <a href="{{(url_for("auth.home"))}}">Inicio</a>
-                    <a href="{{(url_for("auth.contact"))}}">Contáctanos</a>
+                    {% if current_user.rank == "admin" %} <a href="{{ url_for('admin.home') }}">Dashboard</a> {% else %} <a href="{{ url_for('auth.contact') }}">Contáctanos</a> {% endif %}
                     <a href="{{(url_for("auth.catalogo"))}}">Catálogo</a>
                     <a href="#">Carrito</a>
                     {% if current_user.username %} <a href="{{ url_for('auth.logout') }}">Logout</a> {% else %} <a href="{{ url_for('auth.login') }}">Login</a> {% endif %}

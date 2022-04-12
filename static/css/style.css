@@ -87,6 +87,21 @@ p{
     background-color: black;
 }
 
+.banner2{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    background-image: url("https://media.istockphoto.com/photos/vaping-eliquid-from-an-electronic-cigarette-picture-id1199485567?k=20&m=1199485567&s=170667a&w=0&h=AFgGPV0J52DlciAOshrbOVpcJY0D8-SzQIoazuOTEos=");
+    background-position: center left;
+    background-size: cover;
+
+    font-size: 35px;
+    color: #fff;
+    background-color: black;
+}
+
 .h1ban{
     font-size: 72px;
     color: #fff;
@@ -146,6 +161,7 @@ span1{
     z-index: 1;
     background-color: transparent;
 }   
+
 
 .container_form h1{
     background-color: inherit;
@@ -257,16 +273,7 @@ a i:hover{
     box-sizing: border-box;
 }
 
-body1 {
-    background-image: url('static\css\imagenes\AVJ.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-}
-
-
 .containercard{
-    
     align-items: center;
     justify-content: center;
     height: 275px;
@@ -310,11 +317,11 @@ body1 {
     text-transform: uppercase;
     border: white 2px solid;
     background-color:transparent;
-    color: rgb(4, 110, 143);
+    color: aqua;
     padding: 5px;
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: white;
+    background-color: black;
 }
 
 .tabla1 td {
@@ -323,6 +330,9 @@ body1 {
     padding: 10px;
 }
 
+.tabla1 tr{
+    background-color:rgb(50, 50, 50);
+}
 
 .tabla1 caption {
     font-size: 35px;
@@ -330,8 +340,8 @@ body1 {
     padding: 5px;
 }
 
-#T1 tr:nth-child(even){
-    background-color: rgb(4, 110, 143);
+.tabla1 tr:nth-child(even){
+    background-color: black;
 }
 
 .float_left{
@@ -339,4 +349,15 @@ body1 {
     margin: 15px;
     margin-left: 4%;
     z-index: 1;
+    
+}
+
+.float_right{
+    float: right;
+    margin: 100px;
+    margin-right: 5px;
+    margin-right: 1%;
+    position: relative;
+    top: -250px;
+    background-color: transparent;
 }
