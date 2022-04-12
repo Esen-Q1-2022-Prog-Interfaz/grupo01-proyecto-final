@@ -297,15 +297,46 @@ body1 {
     font-size: 20px;
     text-align: justify;
 }
-  
+
 .fotoabout img{
     width: 300px;
     height: 300px;
     border-radius: 50%;
     padding-right: 20px;
-  }
+}
 
-img1{
-    width: 300px;
-    height: 300px;  
+.tabla1 th {
+    font-size: 20px;
+    text-transform: uppercase;
+    border: white 2px solid;
+    background-color:transparent;
+    color: rgb(4, 110, 143);
+    padding: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: white;
+}
+
+.tabla1 td {
+    background-color: transparent;
+    border:white 2px solid;
+    padding: 10px;
+}
+
+
+.tabla1 caption {
+    font-size: 35px;
+    color:rgb(4, 110, 143);
+    padding: 5px;
+}
+
+#T1 tr:nth-child(even){
+    background-color: rgb(4, 110, 143);
+}
+
+.float_left{
+    float: left;
+    margin: 15px;
+    margin-left: 4%;
+    z-index: 1;
 }
