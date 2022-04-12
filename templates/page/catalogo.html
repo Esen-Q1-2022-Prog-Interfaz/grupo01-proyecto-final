@@ -6,9 +6,13 @@
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <link rel="manifest" href="images/site.webmanifest">
 <script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
-
-<body1>
-    <img src="static\css\imagenes\Free\Menu.jpeg" style="width: 600px;height: 750px;">
-    <img src="static\css\imagenes\Salt\Menu.jpeg" style="width: 600px;height: 750px;">
+<body>
+    <section id='Home' class="banner">
+        <div class="container">
+            <a href="{{ url_for('orders.create') }}">Hacer una compra</a>
+            <img src="static/css/imagenes/catalogo1.jpeg">
+            <img src="static/css/imagenes/catalogo2.jpeg">
+        </div>
+    </section>
 {% endblock %}
 </body1>

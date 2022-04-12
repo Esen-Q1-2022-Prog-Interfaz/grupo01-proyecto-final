@@ -7,7 +7,19 @@ from datetime import date
 
 orders = Blueprint("orders", __name__, url_prefix="/orders")
 
-@orders.route("/create")
+@orders.route("/createOrder")
 @login_required
 def CreateOrder():
     return render_template("orders/create.html")
+
+@orders.route("/create", methods=["GET", "POST"])
+@login_required
+def create():
+    form = OrderCreateForm()
+    if form.validate_on_submit():
+        nombre = form.nombre.data
+        direccion = form.direccion.data
+        pago = form.pago.data
+        newOrder = Order(nombre, direccion, pago)
+        return redirect(url_for("orders.CreateOrder"))
+    return render_template("orders/create.html", form=form)
