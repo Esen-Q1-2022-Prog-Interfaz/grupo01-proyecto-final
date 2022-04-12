@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Welcome AVJ{% endblock %}
+{% block contents %}
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> 
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
+<body>
+    <section id='Home' class="banner">
+        <div class="container_form">
+            <h1>Ingresa tus datos para ordenar:</h1>
+            <br>
+            {% if user %}
+            <p>Hola, {{user.username}}</p>
+            {% endif %}
+            <form action="{{ url_for('orders.create') }}" method="post">
+
+                {{ form.hidden_tag() }}
+                {{ form.nombre.label }}
+                {{ form.nombre }}
+                {{ form.direccion.label }}
+                {{ form.direccion }}
+                {{ form.pago.label }}
+                {{ form.pago }}
+                {{ form.submit }}
+            
+            </form>
+        </div>
+    </section>
+{% endblock %}
+</body>

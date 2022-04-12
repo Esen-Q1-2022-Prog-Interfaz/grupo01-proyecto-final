@@ -5,12 +5,12 @@ from models.user import User
 
 
 class OrderCreateForm(FlaskForm):
-    comprador = StringField(
+    
+    nombre = StringField(
         validators=[
             InputRequired(),
-            Length(min=3, max=20),
         ],
-        render_kw={"placeholder": "comprador"},
+        render_kw={"placeholder": "nombre"},
     )
 
     direccion = StringField(
