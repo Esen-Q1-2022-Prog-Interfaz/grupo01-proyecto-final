@@ -1,22 +1,64 @@
-{% extends 'layout.html' %}
-{% block title %}Welcome AVJ{% endblock %}
+{% extends 'layout_dash.html' %}
+{% block title %}Catálogo - AVJ{% endblock %}
 {% block contents %}
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> 
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="images/site.webmanifest">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-<script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
-<body>
-    <section id='Home' class="banner">
+
+<section id='Home' class="banner2">
+    <div>
+        <br>
+        <h1>FREE BASE</h1>
+        <br>
+        <table class='tabla1'>
+            <thead>
+                <tr>
+                    <th>Sabor</th>
+                    <th>Descripción</th>
+                    <th>Base</th>
+                    <th>Tamaño</th>
+                    <th>Nic</th>
+                    <th>Stock</th>
+                    <th>Add to Order</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.sabor }}</td>
+                    <td>{{ item.descripcion }}</td>
+                    <td>{{ item.base }}</td>
+                    <td>{{ item.tamaño }}</td>
+                    <td>{{ item.nic }}</td> 
+                    <td>{{ item.stock }}</td>
+                    <td><a action="{{ url_for('orders.add'), Id = item.id }}" method="post">{{ form.submit }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="float_right">
         <div class="container_form">
-            <form method="post">
-                {{ form.csrf_token }}
-                {{form.nic}}
-                {{form.sabor}}
-                <input type="submit">
-            </form>
+            <h1>Su orden es: </h1>
+            table>
+    <thead>
+        <tr>
+            <th>sabor</th>
+            <th>base</th>
+            <th>tamaño</th>
+            <th>nic</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for orden in ordenes %}
+        <tr>
+            <td>{{ orden.sabor }}</td>
+            <td>{{ orden.base }}</td>
+            <td>{{ orden.tamano }}</td>
+            <td>{{ orden.nic }}</td>
+            
+        </tr>
         </div>
-    </section>
+    </div>
+</section>
+    <br>
+
 {% endblock %}
-</body>

@@ -6,6 +6,7 @@ from models.order import Order
 from datetime import date
 from forms.DropdownForm import Nic
 from models.catalogo import Catalogo
+from forms.OrderResumme import OrderRessume
 
 orders = Blueprint("orders", __name__, url_prefix="/orders")
 
@@ -29,9 +30,27 @@ def create():
         return redirect(url_for("orders.OrderDetails"))
     return render_template("orders/create.html", form=form)
 
+
 @orders.route("/OrderDetails", methods=["GET", "POST"])
 @login_required
 def OrderDetails():
-    form = Nic()
-    form.sabor.choices = [(x.id, x.sabor) for x in Catalogo.query.filter_by(nic = 0.03).all()]
-    return render_template('orders/orderDetails.html', form=form) 
+    productList = Catalogo.query.all()
+    form = OrderRessume()
+    return render_template("orders/orderDetails.html", form=form, items=productList)
+
+@orders.route("/add/<int:Id>")
+@login_required
+def add(Id):
+    currentProduct = Catalogo.query.filter_by(id=Id).first()
+    form = OrderRessume()
+    sabor = currentProduct.sabor
+    base = currentProduct.base
+    tamano = currentProduct.tamaño
+    nic = currentProduct.nic
+    TodasOrdenes = ordenActual.query.all()
+    if form.validate_on_submit():
+        producto = ordenActual(sabor,base,tamano,nic)
+        db.session.add(producto)
+        db.session.commit()
+    return redirect(url_for("orders.OrderDetails"))
+
