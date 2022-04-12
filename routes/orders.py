@@ -19,18 +19,19 @@ def CreateOrder():
 def create():
     form = OrderCreateForm()
     if form.validate_on_submit():
+        usuario = current_user
         nombre = form.nombre.data
         direccion = form.direccion.data
         pago = form.pago.data
-        newOrder = Order(nombre, direccion, pago)
+        newOrder = Order(usuario, nombre, direccion, pago)
         db.session.add(newOrder)
         db.session.commit()
-        return redirect(url_for("orders.CreateOrder"))
+        return redirect(url_for("orders.OrderDetails"))
     return render_template("orders/create.html", form=form)
 
-@orders.route("/OrderDetails", methods["GET", "POST"])
+@orders.route("/OrderDetails", methods=["GET", "POST"])
 @login_required
 def OrderDetails():
     form = Nic()
-    form.sabor.choices = [(Catalogo.id, Catalogo.sabor) for sabor in Catalogo.query.filter_by(nic = '0.03').all()]
-    return render_template('orders/orderDetails.html', form=form)
+    form.sabor.choices = [(x.id, x.sabor) for x in Catalogo.query.filter_by(nic = 0.03).all()]
+    return render_template('orders/orderDetails.html', form=form) 
