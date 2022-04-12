@@ -8,30 +8,22 @@
 <script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
 <body>
     <section id='Home' class="banner">
-        <div class="container">
-            <h1  class="h1ban">
-                <p>Smoking is <span1>dead</span1>.</p> <p>Vaping is the <span1>future</span1>.</p> <p>And the future is <span1>now</span1>!</p>
-            </h1>
-
-            <h3 class="h3ban">Welcome to American Vape Juice{% if current_user.username %}, {{current_user.username}}.{% endif %}</h3>
+        <div class="container_form">
+            <h1>Contact us</h1>
+            <form action="{{ url_for('auth.contact') }}" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.name.label }}
+                {{ form.name }}
+                {{ form.email.label }}
+                {{ form.email }}
+                {{ form.subject.label }}
+                {{ form.subject }}
+                <br>
+                {{ form.message.label }}
+                {{ form.message }}
+                {{ form.submit }}
+            </form>
         </div>
     </section>
-    <h1>Contact us</h1>
-    <br>
-    <form action="{{ url_for('auth.contact') }}" method="post">
-        {{ form.hidden_tag() }}
-        {{ form.name.label }}
-        {{ form.name }}
-        {{ form.email.label }}
-        {{ form.email }}
-        {{ form.subject.label }}
-        {{ form.subject }}
-        {{ form.message.label }}
-        {{ form.message }}
-        {{ form.submit }}
-    </form>
-    <br>
-    <br>
-    <br>
 {% endblock %}
 </body>
