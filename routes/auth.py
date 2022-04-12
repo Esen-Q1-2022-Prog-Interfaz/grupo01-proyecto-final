@@ -2,8 +2,9 @@ from flask import Blueprint, render_template, redirect, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 from forms.registerForm import RegisterForm
 from forms.loginForm import LoginForm
+from forms.contactForm import messageForm
 from db.bcryptService import bcrypt
-
+from models.contact import Message
 from models.user import User
 from db.db import db
 from routes.admin import admin
@@ -64,3 +65,17 @@ def dashboard():
 @login_required
 def catalogo():
     return render_template("page/catalogo.html")
+
+@auth.route("/contact", methods=["GET", "POST"])
+def contact():
+    form = messageForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+        subject = form.subject.data
+        message = form.message.data
+        newMessage = Message(name, email, subject, message)
+        db.session.add(newMessage)
+        db.session.commit()
+        return redirect(url_for("auth.home"))
+    return render_template("page/contact.html", form=form)
