@@ -5,6 +5,7 @@ from forms.loginForm import LoginForm
 from forms.contactForm import messageForm
 from db.bcryptService import bcrypt
 from models.contact import Message
+from models.ordenActual import ordenActual
 from models.user import User
 from db.db import db
 from routes.admin import admin
@@ -81,5 +82,7 @@ def contact():
     return render_template("page/contact.html", form=form)
 
 @auth.route("/cart", methods=["GET", "POST"])
+@login_required
 def cart():
-    return render_template("page/carrito.html")
+    Orden = ordenActual.query.all()
+    return render_template("page/carrito.html", ordenes=Orden)
