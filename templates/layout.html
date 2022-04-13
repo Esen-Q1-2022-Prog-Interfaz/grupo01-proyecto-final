@@ -32,7 +32,7 @@
                     <a href="#">Contáctanos</a>
                     <a href="page/catalogo.html">Catálogo</a>
                     <a href="#">Carrito</a>
-                    <a href="#" class="invisible">Lokin</a>
+                    <a href="#" class="invisible">Login</a>
             </nav>
         </div>
     </header2>
@@ -52,7 +52,7 @@
                     <a href="{{(url_for("auth.home"))}}">Inicio</a>
                     {% if current_user.rank == "admin" %} <a href="{{ url_for('admin.home') }}">Dashboard</a> {% else %} <a href="{{ url_for('auth.contact') }}">Contáctanos</a> {% endif %}
                     <a href="{{(url_for("auth.catalogo"))}}">Catálogo</a>
-                    <a href="#">Carrito</a>
+                    <a href="{{ url_for('auth.cart') }}">Carrito</a>
                     {% if current_user.username %} <a href="{{ url_for('auth.logout') }}">Logout</a> {% else %} <a href="{{ url_for('auth.login') }}">Login</a> {% endif %}
             </nav>
         </div>
