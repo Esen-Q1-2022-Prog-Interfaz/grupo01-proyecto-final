@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block title %}Carrito de compras - AVJ{% endblock %}
+{% block contents %}
+
+<section id="" class="">
+    <div>
+        <h1>Carrito de compras</h1>
+        <br>
+        <br>
+        <table class="">
+
+            <thead>
+                <tr>
+                    <th>Sabor</th>
+                    <th>Porcentaje de nicotina</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Costo total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.flavor }}</td>
+                    <td>{{ item.nic }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.unitCost }}</td>
+                    <td>{{ item.totalCost }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}
