@@ -4,7 +4,7 @@
 
 <section id='Home' class="banner2">
     <div>
-        <h1>Mensajes de usuarios</h1>
+        <h1>Mensajes</h1>
         <br>
         <br>
         <table class='tabla1'>
@@ -16,6 +16,7 @@
                     <th>Objeto</th>
                     <th>Mensaje</th>
                     <th>Fecha</th>
+                    <th>Leído</th>
                 </tr>
             </thead>
 
@@ -27,6 +28,7 @@
                     <td>{{ mensaje.subject }}</td>
                     <td>{{ mensaje.message }}</td>
                     <td>{{ mensaje.date }}</td>
+                    <td><a href="{{ url_for('admin.deleteMessage', Id=mensaje.id) }}">Leído</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

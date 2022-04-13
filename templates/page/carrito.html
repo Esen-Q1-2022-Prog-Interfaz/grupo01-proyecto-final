@@ -9,7 +9,7 @@
 
 <section id='Home' class="banner2">
     <div>
-        <h1>Carrito</h1>
+        <h1>Carrito de compras</h1>
         <br>
         <br>
         <table class='tabla1'>
@@ -20,6 +20,7 @@
                     <th>Base</th>
                     <th>Tamaño</th>
                     <th>Cantidad de nicotina</th>
+                    <th>Eliminar del carrito</th>
                 </tr>
             </thead>
 
@@ -30,6 +31,7 @@
                     <td>{{ orden.base }}</td>
                     <td>{{ orden.tamaño }}</td>
                     <td>{{ orden.nic }}</td>
+                    <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Eliminar</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

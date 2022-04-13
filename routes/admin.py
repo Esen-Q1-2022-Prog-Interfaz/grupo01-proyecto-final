@@ -62,3 +62,11 @@ def update(Id):
 def mensajes():
     Mensaje = Message.query.all()
     return render_template("admin/contacto.html", mensajes=Mensaje)
+
+@admin.route("/leido/<int:Id>")
+@login_required
+def deleteMessage(Id):
+    currentMessage = Message.query.filter_by(id=Id).first()
+    db.session.delete(currentMessage)
+    db.session.commit()
+    return redirect(url_for("admin.mensajes"))
