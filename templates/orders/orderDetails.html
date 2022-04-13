@@ -29,7 +29,7 @@
                     <td>{{ item.tamaño }}</td>
                     <td>{{ item.nic }}</td> 
                     <td>{{ item.stock }}</td>
-                    <td><a action="{{ url_for('orders.add'), Id = item.id }}" method="post">{{ form.submit }}</a></td>
+                    <td><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -38,13 +38,13 @@
     <div class="float_right">
         <div class="container_form">
             <h1>Su orden es: </h1>
-            table>
+            <table class='tabla1'>
     <thead>
         <tr>
-            <th>sabor</th>
-            <th>base</th>
-            <th>tamaño</th>
-            <th>nic</th>
+            <th>Sabor</th>
+            <th>Base</th>
+            <th>Tamaño</th>
+            <th>Nic</th>
         </tr>
     </thead>
     <tbody>
@@ -52,10 +52,10 @@
         <tr>
             <td>{{ orden.sabor }}</td>
             <td>{{ orden.base }}</td>
-            <td>{{ orden.tamano }}</td>
+            <td>{{ orden.tamaño }}</td>
             <td>{{ orden.nic }}</td>
-            
         </tr>
+        {% endfor %}
         </div>
     </div>
 </section>
