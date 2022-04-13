@@ -1,0 +1,40 @@
+{% extends 'layout_dash.html' %}
+{% block title %}Mensajes - AVJ{% endblock %}
+{% block contents %}
+
+<section id='Home' class="banner2">
+    <div>
+        <h1>Mensajes</h1>
+        <br>
+        <br>
+        <table class='tabla1'>
+
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Objeto</th>
+                    <th>Mensaje</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for mensaje in mensajes %}
+                <tr>
+                    <td>{{ mensaje.name }}</td>
+                    <td>{{ mensaje.email }}</td>
+                    <td>{{ mensaje.subject }}</td>
+                    <td>{{ mensaje.message }}</td>
+                    <td>{{ mensaje.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+    </div>
+
+</section>
+
+
+{% endblock %}
