@@ -79,3 +79,7 @@ def contact():
         db.session.commit()
         return redirect(url_for("auth.home"))
     return render_template("page/contact.html", form=form)
+
+@auth.route("/cart", methods=["GET", "POST"])
+def cart():
+    return render_template("page/carrito.html")
