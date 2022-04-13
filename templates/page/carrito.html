@@ -1,6 +1,11 @@
 {% extends 'layout.html' %}
 {% block title %}Carrito de compras - AVJ{% endblock %}
 {% block contents %}
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> 
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+<script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
 
 <section id="" class="">
     <div>
@@ -12,21 +17,19 @@
             <thead>
                 <tr>
                     <th>Sabor</th>
-                    <th>Porcentaje de nicotina</th>
-                    <th>Cantidad</th>
-                    <th>Precio unitario</th>
-                    <th>Costo total</th>
+                    <th>Base</th>
+                    <th>Tamaño</th>
+                    <th>Cantidad de nicotina</th>
                 </tr>
             </thead>
 
             <tbody>
-                {% for item in items %}
+                {% for orden in ordenes %}
                 <tr>
-                    <td>{{ item.flavor }}</td>
-                    <td>{{ item.nic }}</td>
-                    <td>{{ item.quantity }}</td>
-                    <td>{{ item.unitCost }}</td>
-                    <td>{{ item.totalCost }}</td>
+                    <td>{{ orden.sabor }}</td>
+                    <td>{{ orden.base }}</td>
+                    <td>{{ orden.tamaño }}</td>
+                    <td>{{ orden.nic }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
