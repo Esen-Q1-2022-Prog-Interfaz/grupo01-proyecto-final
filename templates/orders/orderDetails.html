@@ -6,6 +6,9 @@
     <div>
         <br>
         <h1>FREE BASE</h1>
+        <p>100ml freebase $25</p>
+        <p>17ml salt nic $15</p>
+        <p>Sin importar el nivel de nic ni el sabor</p>
         <br>
         <table class='tabla1'>
             <thead>
@@ -45,6 +48,7 @@
             <th>Base</th>
             <th>Tamaño</th>
             <th>Nic</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
@@ -54,6 +58,7 @@
             <td>{{ orden.base }}</td>
             <td>{{ orden.tamaño }}</td>
             <td>{{ orden.nic }}</td>
+            <td><a href="{{ url_for('orders.delete', Id=orden.id) }}" method = "post">Borrar</td>
         </tr>
         {% endfor %}
         </div>
