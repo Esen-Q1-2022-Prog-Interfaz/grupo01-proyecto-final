@@ -86,3 +86,11 @@ def contact():
 def cart():
     Orden = ordenActual.query.all()
     return render_template("page/carrito.html", ordenes=Orden)
+
+@auth.route("/deleteCartItem/<int:Id>")
+@login_required
+def deleteCartItem(Id):
+    currentCartItem = ordenActual.query.filter_by(id=Id).first()
+    db.session.delete(currentCartItem)
+    db.session.commit()
+    return redirect(url_for("auth.cart"))
