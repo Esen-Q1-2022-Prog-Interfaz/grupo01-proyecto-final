@@ -53,3 +53,11 @@ def add(Id):
     db.session.commit()
     return redirect(url_for("orders.OrderDetails", id=id))
 
+
+@orders.route("/delete/<int:Id>")
+@login_required
+def delete(Id):
+    currentProduct = ordenActual.query.filter_by(id=Id).first()
+    db.session.delete(currentProduct)
+    db.session.commit()
+    return redirect(url_for("orders.OrderDetails", id=id))

@@ -3,8 +3,10 @@ from flask import Blueprint, render_template, redirect, url_for
 from flask_login import current_user, login_required
 from forms.catalogoform import CatalogoForm
 from forms.catalogoFormUpdate import CatalogoFormUpdate
+from forms.contactForm import messageForm
 
 from models.catalogo import Catalogo
+from models.contact import Message
 from db.db import db
 
 
@@ -54,3 +56,17 @@ def update(Id):
         db.session.commit()
         return redirect(url_for("admin.create"))
     return render_template("admin/update.html", Id=Id,form=form, item=currentProduct)
+
+@admin.route("/contact", methods=["GET", "POST"])
+@login_required
+def mensajes():
+    Mensaje = Message.query.all()
+    return render_template("admin/contacto.html", mensajes=Mensaje)
+
+@admin.route("/leido/<int:Id>")
+@login_required
+def deleteMessage(Id):
+    currentMessage = Message.query.filter_by(id=Id).first()
+    db.session.delete(currentMessage)
+    db.session.commit()
+    return redirect(url_for("admin.mensajes"))
