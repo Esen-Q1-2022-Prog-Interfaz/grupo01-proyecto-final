@@ -9,7 +9,7 @@ class messageForm(FlaskForm):
             InputRequired(),
             Length(min=3, max=50),
         ],
-        render_kw={"placeholder": "Name"},
+        render_kw={"placeholder": "Nombre"},
     )
 
     email = EmailField(
@@ -25,7 +25,7 @@ class messageForm(FlaskForm):
             InputRequired(),
             Length(min=3, max=50)
         ],
-        render_kw={"placeholder": "Subject"},
+        render_kw={"placeholder": "Asunto"},
     )
 
     message = StringField(
@@ -33,7 +33,7 @@ class messageForm(FlaskForm):
             InputRequired(),
             Length(min=3, max=200)
         ],
-        render_kw={"placeholder": "Message"},
+        render_kw={"placeholder": "Mensaje"},
     )
 
-    submit = SubmitField("Send")
+    submit = SubmitField("Enviar")
