@@ -362,3 +362,7 @@ a i:hover{
     top: -250px;
     background-color: transparent;
 }
+
+ul {
+    background-color: transparent;
+}
