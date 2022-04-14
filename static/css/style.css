@@ -363,3 +363,9 @@ a i:hover{
     background-color: transparent;
 }
 
+.ulban{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 25px;
+    background-color: inherit;
+}
