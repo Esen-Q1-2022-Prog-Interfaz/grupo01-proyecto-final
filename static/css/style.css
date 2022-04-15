@@ -362,3 +362,80 @@ a i:hover{
     top: -250px;
     background-color: transparent;
 }
+
+h5{
+    font-size: 70px;
+    font-family: 'Roboto', sans-serif;
+    padding:0;
+}
+
+.tablasaltnic{
+    padding:75px;
+    padding-top: 7px;
+}
+
+.tablasaltnic td{
+    padding:50px;
+}
+
+.tablafree{
+    padding:75px;
+    padding-top: 7px;
+}
+
+.tablafree td{
+    padding:50px;
+}
+
+.catalogo {
+    text-align: center;
+}
+
+h6{
+    text-transform: uppercase;
+    font-size: 25px;
+    padding:3px;
+    font: 'Roboto';
+}
+
+.catalogo p{
+    font-size: 20px;
+    color: aqua;
+}
+
+.nicotine_warning{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+}
+
+.nicotine_warning td{
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.nicotine p{
+    color: red;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nicotine h4{
+    color: red;
+    font-family: 'Roboto', sans-serif;
+}
+
+.warning p{
+    color: black;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.warning h4{
+    color: black;
+    background-color: white;
+
+}
+.warning{
+    background-color: white;
+
+}
