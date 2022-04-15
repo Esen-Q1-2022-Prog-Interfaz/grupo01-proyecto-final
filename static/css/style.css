@@ -140,6 +140,7 @@ p{
     position: relative;
     z-index: 1;
     background-color: transparent;
+    align-items: center;
 }
 
 span1{
@@ -191,7 +192,22 @@ input, textarea, select, button {
     box-sizing: border-box;
     background-color: black;
 }
-
+.boton {
+    margin: 15px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 15px;
+    margin-left: 40%;
+    margin-right: auto;
+}
 
 .container_form p{
     font-family: 'Roboto', sans-serif;
