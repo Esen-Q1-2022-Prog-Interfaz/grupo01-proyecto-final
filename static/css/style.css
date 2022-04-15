@@ -382,7 +382,6 @@ a i:hover{
     top: -250px;
     background-color: transparent;
 }
-<<<<<<< HEAD
 
 h5{
     font-size: 70px;
@@ -460,7 +459,6 @@ h6{
     background-color: white;
 
 }
-=======
 #slider {
     margin: 0 auto;
     width: 800px;
@@ -583,4 +581,8 @@ h6{
  #slide4:checked ~ #bullets label:nth-child(4) {
     background: #444;
  }
->>>>>>> 19bfc8d32375988a68ab4646f532105c93daf0e4
+
+.boton{
+    background-color: aqua;
+    color: black;
+}
