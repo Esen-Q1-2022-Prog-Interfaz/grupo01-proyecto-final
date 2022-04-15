@@ -6,7 +6,7 @@ class Message(db.Model):
     name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(50), nullable=False)
     subject = db.Column(db.String(50), nullable=False)
-    message = db.Column(db.String(100), nullable=False)
+    message = db.Column(db.String(200), nullable=False)
     date = db.Column(db.String(50), nullable=True)
 
     def __init__(self, name, email, subject, message, date=None) -> None:
