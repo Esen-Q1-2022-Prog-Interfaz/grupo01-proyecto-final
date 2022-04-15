@@ -43,21 +43,27 @@
             <form action="{{ url_for('admin.create') }}" method="post">
                 {{ form.hidden_tag() }}
                 {{ form.sabor.label }}
+                <br>
                 {{ form.sabor }}
                 <br>
                 {{ form.descripcion.label }}
+                <br>
                 {{ form.descripcion }}
                 <br>
                 {{ form.base.label }}
+                <br>
                 {{ form.base }}
                 <br>
                 {{ form.tamaño.label }}
+                <br>
                 {{ form.tamaño }}
                 <br>
                 {{ form.nic.label }}
+                <br>
                 {{ form.nic }}
                 <br>
                 {{ form.stock.label }}
+                <br>
                 {{ form.stock }}
                 <br>
                 {{ form.submit }}

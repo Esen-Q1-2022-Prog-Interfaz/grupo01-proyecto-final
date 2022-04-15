@@ -35,5 +35,7 @@ class messageForm(FlaskForm):
         ],
         render_kw={"placeholder": "Mensaje"},
     )
+    
+    
 
     submit = SubmitField("Enviar")
