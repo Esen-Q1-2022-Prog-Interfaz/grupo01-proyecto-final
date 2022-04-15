@@ -70,3 +70,8 @@ def deleteMessage(Id):
     db.session.delete(currentMessage)
     db.session.commit()
     return redirect(url_for("admin.mensajes"))
+
+@admin.route("/pedidos", methods=["GET", "POST"])
+@login_required
+def pedidos():
+    return render_template("admin/pedidos.html")

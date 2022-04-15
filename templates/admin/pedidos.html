@@ -1,4 +1,4 @@
-{% extends 'layout.html' %}
+{% extends 'layout_dash.html' %}
 {% block title %}Carrito de compras - AVJ{% endblock %}
 {% block contents %}
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -9,7 +9,7 @@
 
 <section id='Home' class="banner2">
     <div class="centrado">
-        <h1>Carrito de compras</h1>
+        <h1>Ordenes pendientes</h1>
         <br>
         <br>
         <table class='tabla1'>
@@ -20,7 +20,7 @@
                     <th>Base</th>
                     <th>Tamaño</th>
                     <th>Cantidad de nicotina</th>
-                    <th>Eliminar del carrito</th>
+                    <th>Pedido terminado</th>
                 </tr>
             </thead>
 
@@ -31,22 +31,13 @@
                     <td>{{ orden.base }}</td>
                     <td>{{ orden.tamaño }}</td>
                     <td>{{ orden.nic }}</td>
-                    <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Eliminar</a></td>
+                    <td><a href="#">Pedido terminado</a></td>
                 </tr>
                 {% endfor %}
-
             </tbody>
             
         </table>
-
-        <br>
-
-        <button type="button" class = "b2">Enviar pedido</button>
-
-        
     </div>
-   
-    
 
 </section>
 
