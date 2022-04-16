@@ -5,7 +5,6 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    background-color: black; 
      
 }
 
@@ -102,7 +101,9 @@ p{
     color: #fff;
     background-color: black;
 }
-
+.cuerpoHome{
+    background-color: black;
+}
 .h1ban{
     font-size: 72px;
     color: #fff;
@@ -584,8 +585,12 @@ h6{
  }
 
 .boton{
-    background-color: aqua;
-    color: black;
+    background-color: black;
+    color: white;
+}
+
+.banner3 a:hover{
+    color:aqua;
 }
 
 .b2{
@@ -606,4 +611,10 @@ h6{
     color: black;
 }
 
+.banner3{
+    background:linear-gradient(to right, black,#585858);
+}
 
+.catalogo{
+    background:linear-gradient(to right, black,#585858);
+}
