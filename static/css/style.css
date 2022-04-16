@@ -202,7 +202,6 @@ input, textarea, select, button {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #000000;
     border: none;
     border-radius: 15px;
     margin-left: 40%;
@@ -603,4 +602,56 @@ h6{
 .b2:hover{
     background-color: aqua;
     color: black;
+}
+
+.boton_car {
+    margin: 15px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    margin-left: 42%;
+    background-color: aqua;
+    color: black;
+}
+.intro {
+    text-align: center;
+    margin-top: 5px;
+}
+.tabla_1{
+    margin-left: 18%;
+}
+
+.tabla_1 th {
+    text-transform: uppercase;
+    border: white 2px solid;
+    background-color:transparent;
+    color: aqua;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    background-color: black;
+    font-size: 25px;
+    text-align: center;
+}
+
+.tabla_1 td {
+    background-color: transparent;
+    border:white 2px solid;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    font-size: 25px;
+    text-align: center;
+}
+.tabla_1 tr{
+    background-color:rgb(50, 50, 50);
+}
+.tabla_1 tr:nth-child(even){
+    background-color: black;
 }
