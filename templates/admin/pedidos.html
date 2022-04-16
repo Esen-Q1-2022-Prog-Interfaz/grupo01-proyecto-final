@@ -9,7 +9,7 @@
 
 <section id='Home' class="banner2">
     <div class="centrado">
-        <h1>Ordenes pendientes</h1>
+        <h1>Pedidos pendientes</h1>
         <br>
         <br>
         <table class='tabla1'>
@@ -25,27 +25,28 @@
             </thead>
 
             <tbody>
-                {% for orden in ordenes %}
+                {% for orden in orden %}
                 <tr>
                     <td>{{ orden.sabor }}</td>
                     <td>{{ orden.base }}</td>
                     <td>{{ orden.tamaño }}</td>
                     <td>{{ orden.nic }}</td>
-                    <td><a href="#">Pedido terminado</a></td>
+                    <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Pedido terminado</a></td>
                 </tr>
                 {% endfor %}
+
             </tbody>
             
         </table>
+
+        <br>
+
+        
     </div>
+   
+    
 
 </section>
-
-
-
-
-
-
 
 
 {% endblock %}

@@ -7,6 +7,7 @@ from forms.contactForm import messageForm
 
 from models.catalogo import Catalogo
 from models.contact import Message
+from models.ordenActual import ordenActual
 from db.db import db
 
 
@@ -74,4 +75,5 @@ def deleteMessage(Id):
 @admin.route("/pedidos", methods=["GET", "POST"])
 @login_required
 def pedidos():
-    return render_template("admin/pedidos.html")
+    orden = ordenActual.query.all()
+    return render_template("admin/pedidos.html", orden=orden)
