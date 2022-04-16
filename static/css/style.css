@@ -5,7 +5,8 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    background-color: black;
+    background-color: black; 
+     
 }
 
 header{
@@ -299,7 +300,7 @@ a i:hover{
     justify-content: center;
     height: 275px;
     background: black;
-    padding-left: 200px;
+    padding-left: 375px;
     padding-bottom: 0%;
 }
 
@@ -604,3 +605,5 @@ h6{
     background-color: aqua;
     color: black;
 }
+
+
