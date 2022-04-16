@@ -288,21 +288,25 @@ a i:hover{
 
 .aboutus{
     align-items: center;
+    align-content: center;
 }
 
 .font{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .containercard{
     align-items: center;
-    justify-content: center;
+    
     height: 275px;
     background: black;
-    padding-left: 375px;
+    /*padding-left: 375px;*/
     padding-bottom: 0%;
+
+    
 }
 
 .card-container{
@@ -311,6 +315,9 @@ a i:hover{
     background: black;
     border-radius: 2px;
     display: flex;
+    align-content: center;
+    padding-right: 0%;
+    justify-content: center;
 }
 
 .fotoabout{
