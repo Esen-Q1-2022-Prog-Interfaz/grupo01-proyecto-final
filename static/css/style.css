@@ -5,7 +5,6 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    background-color: black;
 }
 
 header{
@@ -235,6 +234,10 @@ div.contenedor{
     background-color: transparent;
 }
 
+.cuerpoHome{
+    background-color:black;
+}
+
 div.itemCarrusel{
     z-index: 1;
     height: 400px;
@@ -409,8 +412,13 @@ h5{
     padding:50px;
 }
 
-.catalogo {
+.catalogo{
     text-align: center;
+    background:linear-gradient(to right, black,#585858); 
+        /*background-image: url("fondo.jpg");
+        background-position: center left;
+        background-size: cover;*/
+    background-color: aqua;
 }
 
 h6{
