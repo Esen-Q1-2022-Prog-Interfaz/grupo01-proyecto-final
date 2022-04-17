@@ -479,13 +479,12 @@ div.warning p{
 
 }
 
-}
 #slider {
     margin: 0 auto;
     width: 800px;
     max-width: 150%;
     text-align: center;
- }
+}
  #slider input[type=radio] {
     display: none;
  }
