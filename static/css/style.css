@@ -570,6 +570,7 @@ div.warning p{
  #slide3:checked ~ #controls label:nth-child(4),
  #slide4:checked ~ #controls label:nth-child(1) {
     background: url("right.svg") no-repeat;
+    background-size: cover;
     float:right;
     margin: 0 -50px 0 0;
     display: block;
@@ -579,6 +580,7 @@ div.warning p{
  #slide3:checked ~ #controls label:nth-last-child(3),
  #slide4:checked ~ #controls label:nth-last-child(2) {
      background: url("left-arrow.svg") no-repeat;
+     background-size: cover;
      float:left;
      margin: 0 0 0 -50px;
      display: block;
