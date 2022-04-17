@@ -5,7 +5,6 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    background-color: black;
 }
 
 header{
@@ -21,6 +20,15 @@ nav{
     display: grid;
     grid-gap: 18px;
     grid-template-columns:  repeat(5, auto);
+    font-weight: 600;
+    align-items: center;
+    background-color: black;
+}
+
+.nav_dash{
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns:  repeat(6, auto);
     font-weight: 600;
     align-items: center;
     background-color: black;
@@ -47,6 +55,8 @@ nav a:hover{
     color:white;
     background-color: black;
 }
+
+
 
 .logo-image img{
     width: 80px;
@@ -78,13 +88,17 @@ p{
     display: flex;
     align-items: center;
 
-    background-image: url("https://media.istockphoto.com/photos/vaping-eliquid-from-an-electronic-cigarette-picture-id1199485567?k=20&m=1199485567&s=170667a&w=0&h=AFgGPV0J52DlciAOshrbOVpcJY0D8-SzQIoazuOTEos=");
+    background-image: url("fondo.png");
     background-position: center left;
     background-size: cover;
 
     font-size: 35px;
     color: #fff;
     background-color: black;
+}
+
+.cuerpoHome{
+    background-color:black;
 }
 
 .banner2{
@@ -93,15 +107,13 @@ p{
     display: flex;
     align-items: center;
 
-    background-image: url("https://media.istockphoto.com/photos/vaping-eliquid-from-an-electronic-cigarette-picture-id1199485567?k=20&m=1199485567&s=170667a&w=0&h=AFgGPV0J52DlciAOshrbOVpcJY0D8-SzQIoazuOTEos=");
+    background-image: url("fondo.png");
     background-position: center left;
     background-size: cover;
-
     font-size: 35px;
     color: #fff;
-    background-color: black;
-}
 
+}
 .h1ban{
     font-size: 72px;
     color: #fff;
@@ -285,36 +297,40 @@ a i:hover{
 
 .aboutus{
     align-items: center;
+    align-content: center;
 }
 
 .font{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    align-items: center;
 }
 
 .containercard{
     align-items: center;
-    justify-content: center;
+    
     height: 275px;
-    background: black;
-    padding-left: 200px;
+    /*padding-left: 375px;*/
     padding-bottom: 0%;
+
+    
 }
 
 .card-container{
     align-items: center;
     height: auto;
-    background: black;
     border-radius: 2px;
     display: flex;
+    align-content: center;
+    padding-right: 0%;
+    justify-content: center;
 }
 
 .fotoabout{
     border-right: 2px solid white;
 }
 .descripcion{
-    background: black;
     line-height: 25px;
     width: 300px;
     padding-left: 20px;
@@ -582,8 +598,12 @@ h6{
  }
 
 .boton{
-    background-color: aqua;
-    color: black;
+    background-color: black;
+    color: white;
+}
+
+.banner3 a:hover{
+    color:aqua;
 }
 
 .b2{
@@ -604,6 +624,7 @@ h6{
     color: black;
 }
 
+<<<<<<< HEAD
 .boton_car {
     margin: 15px;
     display: inline-block;
@@ -655,3 +676,12 @@ h6{
 .tabla_1 tr:nth-child(even){
     background-color: black;
 }
+=======
+.banner3{
+    background:linear-gradient(to right, black,#585858);
+}
+
+.catalogo{
+    background:linear-gradient(to right, black,#585858);
+}
+>>>>>>> 2ce15a7f2f22de3cf31558eae8d15046797ef87a

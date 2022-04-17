@@ -7,6 +7,7 @@ from datetime import date
 from models.catalogo import Catalogo
 from models.ordenActual import ordenActual
 from forms.OrderResumme import OrderRessume
+from models.ordenPendiente import ordenPendiente
 
 orders = Blueprint("orders", __name__, url_prefix="/orders")
 
@@ -61,3 +62,4 @@ def delete(Id):
     db.session.delete(currentProduct)
     db.session.commit()
     return redirect(url_for("orders.OrderDetails", id=id))
+

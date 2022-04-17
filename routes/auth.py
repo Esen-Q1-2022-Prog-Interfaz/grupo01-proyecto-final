@@ -8,7 +8,10 @@ from models.contact import Message
 from models.ordenActual import ordenActual
 from models.user import User
 from db.db import db
+from models.ordenPendiente import ordenPendiente
 from routes.admin import admin
+from models.ordenActual import ordenActual
+from models.order import Order
 
 auth = Blueprint("auth", __name__)
 
@@ -94,3 +97,22 @@ def deleteCartItem(Id):
     db.session.delete(currentCartItem)
     db.session.commit()
     return redirect(url_for("auth.cart"))
+
+@admin.route("/EnviarOrden/<int:Id>")
+@login_required
+def enviar(Id):
+    currentProduct = ordenActual.query.filter_by(id=Id).first()
+    currentOrder = Order.query.filter_by(id=Id).first()
+    nombre = currentOrder.nombre
+    direccion = currentOrder.direccion
+    pago = currentOrder.pago
+    sabor = currentProduct.sabor
+    base = currentProduct.base
+    tamano = currentProduct.tamaño
+    nic = currentProduct.nic
+    producto = ordenPendiente(sabor,base,tamano,nic)
+    datos = ordenPendiente(nombre,direccion, pago)
+    db.session.add(producto)
+    db.session.add(datos)
+    db.session.commit()
+    return redirect(url_for("auth.home", id=Order.id))
