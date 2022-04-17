@@ -115,4 +115,4 @@ def enviar(Id):
     db.session.add(producto)
     db.session.add(datos)
     db.session.commit()
-    return redirect(url_for("auth.home", id=id))
+    return redirect(url_for("auth.home", id=Order.id))
