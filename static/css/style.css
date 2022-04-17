@@ -672,7 +672,7 @@ h6{
  }
  .footer .social {
     text-align: center;
-    color: #ffffff;
+    color:#ffffff;
  }
  .footer .social a{
     font-size: 15px;
@@ -690,7 +690,10 @@ h6{
     font-size: 28px;
     color:#ffffff
  }
- .footer .social i{
+.footer .social i{
     font-size: 38px;
-    color: #fff;
- }
+    color:#fff;
+}
+.footer .social i:hover{
+    color:aqua;
+}
