@@ -75,7 +75,8 @@ def contact():
         email = form.email.data
         subject = form.subject.data
         message = form.message.data
-        newMessage = Message(name, email, subject, message)
+        date = form.date.data
+        newMessage = Message(name, email, subject, message, date)
         db.session.add(newMessage)
         db.session.commit()
         return redirect(url_for("auth.home"))
