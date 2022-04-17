@@ -165,7 +165,7 @@ span1{
 }
 
 .container_form{
-    max-width: 100%;
+    max-width: 1600px;
     margin: 0 auto;
     margin-right: 0;
     position: relative;
@@ -216,7 +216,6 @@ input, textarea, select, button {
     color: #fff;
     border: none;
     border-radius: 15px;
-    margin-left: 40%;
     margin-right: auto;
 }
 .centrado{
