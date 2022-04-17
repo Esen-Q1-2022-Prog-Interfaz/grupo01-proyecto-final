@@ -285,31 +285,41 @@ a i:hover{
     padding-bottom: 20px;
 }
 
+.about{
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
 .aboutus{
     align-items: center;
+    align-content: center;
 }
 
 .font{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    align-items: center;
+    text-align: center;
 }
 
 .containercard{
     align-items: center;
-    justify-content: center;
     height: 275px;
     background: black;
-    padding-left: 200px;
+     /*padding-left: 200px;*/
     padding-bottom: 0%;
 }
 
 .card-container{
     align-items: center;
+    align-content: center;
+    padding-right: 0%;
     height: auto;
     background: black;
     border-radius: 2px;
     display: flex;
+    justify-content: center;
 }
 
 .fotoabout{
