@@ -94,7 +94,7 @@ p{
 
     font-size: 35px;
     color: #fff;
-    background-color: black;
+
 }
 
 .cuerpoHome{
@@ -675,10 +675,11 @@ h6{
 .tabla_1 tr:nth-child(even){
     background-color: black;
 }
-.banner3{
-    background:linear-gradient(to right, black,#585858);
-}
 
 .catalogo{
-    background:linear-gradient(to right, black,#585858);
+    background:linear-gradient(to right, black,#585858); 
+    /*background-image: url("fondo.jpg");
+    background-position: center left;
+    background-size: cover;*/
+    
 }
