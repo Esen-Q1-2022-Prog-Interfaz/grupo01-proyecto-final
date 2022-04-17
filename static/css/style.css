@@ -624,7 +624,6 @@ h6{
     color: black;
 }
 
-<<<<<<< HEAD
 .boton_car {
     margin: 15px;
     display: inline-block;
@@ -676,7 +675,6 @@ h6{
 .tabla_1 tr:nth-child(even){
     background-color: black;
 }
-=======
 .banner3{
     background:linear-gradient(to right, black,#585858);
 }
@@ -684,4 +682,3 @@ h6{
 .catalogo{
     background:linear-gradient(to right, black,#585858);
 }
->>>>>>> 2ce15a7f2f22de3cf31558eae8d15046797ef87a
