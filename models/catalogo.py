@@ -9,7 +9,7 @@ class Catalogo(db.Model):
     nic = db.Column(db.Float, nullable=False)
     stock = db.Column(db.Integer, nullable=False)
 
-    def __init__(self, sabor, descripcion, base, tamaño, nic, stock) -> None:
+    def __init__(self, sabor, descripcion, base, tamaño, nic,stock) -> None:
         self.sabor = sabor
         self.descripcion = descripcion
         self.base = base

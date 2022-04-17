@@ -347,6 +347,10 @@ a i:hover{
     padding-right: 20px;
 }
 
+.tabla1{
+    margin: 0 auto;
+}
+
 .tabla1 th {
     font-size: 20px;
     text-transform: uppercase;
@@ -387,7 +391,7 @@ a i:hover{
     
 }
 
-.float_right{
+/*.float_right{
     float: right;
     margin: 100px;
     margin-right: 5px;
@@ -395,7 +399,7 @@ a i:hover{
     position: relative;
     top: -250px;
     background-color: transparent;
-}
+}*/
 
 h5{
     font-size: 70px;
