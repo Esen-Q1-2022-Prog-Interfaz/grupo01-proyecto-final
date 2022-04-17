@@ -457,14 +457,17 @@ h6{
 .nicotine p{
     color: red;
     font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 
 .nicotine h4{
     color: red;
     font-family: 'Roboto', sans-serif;
 }
-
-.warning p{
+.warning{
+    background-color:white;
+}
+div.warning p{
     color: black;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
@@ -475,8 +478,6 @@ h6{
     background-color: white;
 
 }
-.warning{
-    background-color: white;
 
 }
 #slider {
