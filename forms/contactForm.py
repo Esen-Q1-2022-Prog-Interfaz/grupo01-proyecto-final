@@ -36,6 +36,13 @@ class messageForm(FlaskForm):
         render_kw={"placeholder": "Mensaje"},
     )
     
+    date = StringField(
+        validators=[
+            InputRequired(),
+            Length(min=3, max=12)
+        ],
+        render_kw={"placeholder": "Fecha"},
+    )
     
 
     submit = SubmitField("Enviar")
