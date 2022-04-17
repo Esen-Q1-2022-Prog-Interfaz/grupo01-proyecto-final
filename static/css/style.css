@@ -25,6 +25,15 @@ nav{
     background-color: black;
 }
 
+.nav_dash{
+    display: grid;
+    grid-gap: 18px;
+    grid-template-columns:  repeat(6, auto);
+    font-weight: 600;
+    align-items: center;
+    background-color: black;
+}
+
 nav a:hover{
     color: aqua;
     transition: all 0.5s;
@@ -46,6 +55,8 @@ nav a:hover{
     color:white;
     background-color: black;
 }
+
+
 
 .logo-image img{
     width: 80px;

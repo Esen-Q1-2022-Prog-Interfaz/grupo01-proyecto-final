@@ -5,7 +5,7 @@
 <section id='Home' class="banner2">
     <div>
         <br>
-        <h1>FREE BASE</h1>
+        <h1>Free Base</h1>
         <br>
         <table class='tabla1'>
             <thead>
@@ -23,16 +23,18 @@
             </thead>
             <tbody>
                 {% for item in items %}
-                <tr>
-                    <td>{{ item.sabor }}</td>
-                    <td>{{ item.descripcion }}</td>
-                    <td>{{ item.base }}</td>
-                    <td>{{ item.tamaño }}</td>
-                    <td>{{ item.nic }}</td> 
-                    <td>{{ item.stock }}</td>
-                    <td><a href="{{ url_for('admin.delete', Id=item.id) }}">Delete Flavor</a></td>
-                    <td><a href="{{ url_for('admin.update', Id=item.id) }}">Update Stock</a></td>
-                </tr>
+                    {% if item.base == "Free"%}
+                        <tr>
+                            <td>{{ item.sabor }}</td>
+                            <td>{{ item.descripcion }}</td>
+                            <td>{{ item.base }}</td>
+                            <td>{{ item.tamaño }}</td>
+                            <td>{{ item.nic }}</td> 
+                            <td>{{ item.stock }}</td>
+                            <td><a href="{{ url_for('admin.delete', Id=item.id) }}">Delete Flavor</a></td>
+                            <td><a href="{{ url_for('admin.update', Id=item.id) }}">Update Stock</a></td>
+                        </tr>
+                    {% endif %}
                 {% endfor %}
             </tbody>
         </table>
@@ -76,6 +78,9 @@
 
 <section id='Home' class="banner2">
     <div>
+        <br>
+        <h1>Salt Nic</h1>
+        <br>
         <table class='tabla1'>
             <thead>
                 <tr>
@@ -92,16 +97,18 @@
             </thead>
             <tbody>
                 {% for item in items %}
-                <tr>
-                    <td>{{ item.sabor }}</td>
-                    <td>{{ item.descripcion }}</td>
-                    <td>{{ item.base }}</td>
-                    <td>{{ item.tamaño }}</td>
-                    <td>{{ item.nic }}</td> 
-                    <td>{{ item.stock }}</td>
-                    <td><a href="{{ url_for('admin.delete', Id=item.id) }}">Delete Flavor</a></td>
-                    <td><a href="{{ url_for('admin.update', Id=item.id) }}">Update Stock</a></td>
-                </tr>
+                    {% if item.base == "Salt"%}
+                        <tr>
+                            <td>{{ item.sabor }}</td>
+                            <td>{{ item.descripcion }}</td>
+                            <td>{{ item.base }}</td>
+                            <td>{{ item.tamaño }}</td>
+                            <td>{{ item.nic }}</td> 
+                            <td>{{ item.stock }}</td>
+                            <td><a href="{{ url_for('admin.delete', Id=item.id) }}">Delete Flavor</a></td>
+                            <td><a href="{{ url_for('admin.update', Id=item.id) }}">Update Stock</a></td>
+                        </tr>
+                    {% endif %}
                 {% endfor %}
             </tbody>
         </table>
