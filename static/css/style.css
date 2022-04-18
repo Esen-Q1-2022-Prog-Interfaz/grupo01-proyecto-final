@@ -54,6 +54,7 @@ nav a:hover{
     position: relative;
     color:white;
     background-color: black;
+
 }
 
 .logo-image img{
@@ -196,18 +197,18 @@ input,textarea, button {
 }
 .boton {
     margin: 15px;
-    display: inline-block;
+    display: scroll;
+    position:fixed;
     padding: 15px 25px;
     font-size: 24px;
     cursor: pointer;
-    text-align: center;	
     text-decoration: none;
     outline: none;
     border: none;
     border-radius: 15px;
-    margin-right: auto;
     background-color: white;
     color: black;
+    right:0px;
 }
 .centrado{
     align-items: center;
