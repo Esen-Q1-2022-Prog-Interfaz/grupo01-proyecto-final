@@ -11,7 +11,7 @@ from db.db import db
 from models.ordenPendiente import ordenPendiente
 from routes.admin import admin
 from models.ordenActual import ordenActual
-from models.order import Order
+
 
 auth = Blueprint("auth", __name__)
 
@@ -95,31 +95,4 @@ def cart():
             precio += 25
         elif item.base == "Salt Nic":
             precio += 15
-
     return render_template("page/carrito.html", ordenes=Orden, precio=precio)
-
-@auth.route("/deleteCartItem/<int:Id>")
-@login_required
-def deleteCartItem(Id):
-    currentCartItem = ordenActual.query.filter_by(id=Id).first()
-    db.session.delete(currentCartItem)
-    db.session.commit()
-    return redirect(url_for("auth.cart"))
-
-@admin.route("/EnviarOrden")
-@login_required
-def enviar():
-    keys = db.inspect(ordenActual).columns.keys()
-    llaves = len(keys)
-    llaves -= 2
-    info = Order.query.order_by(Order.id).first()
-    for key in range(llaves):
-        prod = ordenActual.query.order_by(ordenActual.id).first()
-        todo = ordenPendiente(info.nombre, info.direccion, info.pago, prod.sabor, prod.base, prod.tamaño, prod.nic)
-        db.session.add(todo)
-        db.session.delete(prod)
-        db.session.commit()
-        
-    db.session.delete(info)
-    db.session.commit()
-    return  redirect(url_for("auth.home"))
