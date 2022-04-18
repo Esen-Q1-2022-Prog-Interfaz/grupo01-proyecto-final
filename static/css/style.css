@@ -410,21 +410,27 @@ h5{
 }
 
 .tablasaltnic{
-    padding:75px;
+    padding-right:11%;
+    padding-left:11%;
     padding-top: 7px;
 }
 
 .tablasaltnic td{
-    padding:50px;
+    padding-right:5.5%;
+    padding-left:5.5%;
+    padding-bottom: 50px;
 }
 
 .tablafree{
-    padding:75px;
+    padding-right:11%;
+    padding-left:11%;
     padding-top: 7px;
 }
 
 .tablafree td{
-    padding:50px;
+    padding-right:5.5%;
+    padding-left:5.5%;
+    padding-bottom: 50px;
 }
 
 .catalogo{
@@ -452,10 +458,11 @@ h6{
     text-align: center;
     width: 100%;
     font-size: 30px;
+    padding-bottom:100px;
 }
 
 .nicotine_warning td{
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
 }
