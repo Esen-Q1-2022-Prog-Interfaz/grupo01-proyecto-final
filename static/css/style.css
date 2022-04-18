@@ -102,7 +102,7 @@ p{
     display: flex;
     align-items: center;
 
-    background-image: url("fondo.png");
+    background:linear-gradient(to right, black,#585858); 
     background-position: center left;
     background-size: cover;
 
