@@ -7,13 +7,13 @@
 <link rel="manifest" href="images/site.webmanifest">
 <script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
 
-<section id='Home'>
-    <div class="intro">
-        <h5>CARRITO DE COMPRAS</h5>
-    </div>
-    <br>
-    <br>
+<section id='Home' class="banner">
     <div class="cen">
+        <div class="intro">
+            <h5>CARRITO DE COMPRAS</h5>
+        </div>
+        <br>
+        <br>
         <table class='tabla_1'>
 
             <thead>
@@ -39,8 +39,8 @@
             </tbody>
         </table>
         <br>
+        <a class = "boton_car" href="{{ url_for('admin.enviar') }}">Enviar pedido NUEVO</a>
     </div>
-    <a class = "boton_car" href="{{ url_for('admin.enviar') }}">Enviar pedido NUEVO</a>
 
 
 

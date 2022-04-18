@@ -151,6 +151,9 @@ p{
     align-items: center;
 }
 
+.cen{
+    z-index: 1;
+}
 span1{
     color: aqua;
     background-color: inherit;
