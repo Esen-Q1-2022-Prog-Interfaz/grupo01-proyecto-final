@@ -152,7 +152,12 @@ span1{
 }
 
 .container_form{
+<<<<<<< HEAD
     max-width: 1600px;
+=======
+    max-width: 100%;
+    margin: 0 auto;
+>>>>>>> 276f1f7ea175e0b80a8a872ff3e144e4eb1f576d
     margin-right: 0;
     text-align: center;
     width: 100%;
@@ -489,8 +494,8 @@ div.warning p{
  }
  #slides {
     padding: 5px;
-    border: 1px solid #ccc;
-    background: #fff;
+    /*border: 1px solid #ccc;*/
+    background: black;
     position: relative;
     z-index: 50;
  }
@@ -523,25 +528,25 @@ div.warning p{
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: #fff;
+    color: black;
  }
  #slide-content h2{
-     color: #fff;
+     color: black;
  }
  #slides .slide_1 {
-    background: url("/static/css/imagenes/Salt/Envy\ Apple.jpeg");
+    background: url("imagenes/Salt/CaribbeanSunrise.jpeg");
     background-size: cover;
  }
  #slides .slide_2 {
-    background: url("/static/css/imagenes/Salt/Miami\ Beach.jpeg");
+    background: url("imagenes/Salt/LovePotion.jpeg");
     background-size: cover;
  }
  #slides .slide_3 {
-    background: url("/static/css/imagenes/Free/Paradise.jpeg");
+    background: url("imagenes/Salt/MiamiBeach.jpeg");
     background-size: cover;
  }
  #slides .slide_4 {
-    background: url("/static/css/imagenes/Free/Love\ Potion.jpeg");
+    background: url("imagenes/Salt/Paradise1.jpeg");
     background-size: cover;
  }
  #controls {
