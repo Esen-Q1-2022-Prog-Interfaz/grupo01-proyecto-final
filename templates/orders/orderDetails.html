@@ -24,15 +24,47 @@
             </thead>
             <tbody>
                 {% for item in items %}
+                    {% if item.base == "Free"%}
+                        <tr>
+                            <td>{{ item.sabor }}</td>
+                            <td>{{ item.descripcion }}</td>
+                            <td>{{ item.base }}</td>
+                            <td>{{ item.tamaño }}</td>
+                            <td>{{ item.nic }}</td> 
+                            <td>{{ item.stock }}</td>
+                            <td class="add"><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <table class='tabla1'>
+            <thead>
                 <tr>
-                    <td>{{ item.sabor }}</td>
-                    <td>{{ item.descripcion }}</td>
-                    <td>{{ item.base }}</td>
-                    <td>{{ item.tamaño }}</td>
-                    <td>{{ item.nic }}</td> 
-                    <td>{{ item.stock }}</td>
-                    <td class="add"><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
+                    <th>Sabor</th>
+                    <th>Descripción</th>
+                    <th>Base</th>
+                    <th>Tamaño</th>
+                    <th>Nic</th>
+                    <th>Stock</th>
+                    <th>Add to Order</th>
+                    
                 </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    {% if item.base == "Salt Nic"%}
+                        <tr>
+                            <td>{{ item.sabor }}</td>
+                            <td>{{ item.descripcion }}</td>
+                            <td>{{ item.base }}</td>
+                            <td>{{ item.tamaño }}</td>
+                            <td>{{ item.nic }}</td> 
+                            <td>{{ item.stock }}</td>
+                            <td class="add"><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
+                        </tr>
+                    {% endif %}
                 {% endfor %}
             </tbody>
         </table>
