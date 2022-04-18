@@ -642,12 +642,12 @@ div.warning p{
     border: none;
     border-radius: 15px;
     margin-left: 42%;
-    background-color: aqua;
+    background-color: white;
     color: black;
 }
 .intro {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 .tabla_1{
     margin-left: 18%;
