@@ -69,32 +69,5 @@
             </tbody>
         </table>
     </div>
-    <!--<div class="float_right">
-        <div class="container_form">
-            <h1>Su orden es: </h1>
-            <table class='tabla1'>
-    <thead>
-        <tr>
-            <th>Sabor</th>
-            <th>Base</th>
-            <th>Tamaño</th>
-            <th>Nic</th>
-            <th>Eliminar</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for orden in ordenes %}
-        <tr>
-            <td>{{ orden.sabor }}</td>
-            <td>{{ orden.base }}</td>
-            <td>{{ orden.tamaño }}</td>
-            <td>{{ orden.nic }}</td>
-            <td><a href="{{ url_for('orders.delete', Id=orden.id) }}" method = "post">Borrar</td>
-        </tr>
-        {% endfor %}
-        </div>
-    </div>
-</section>
-    <br>-->
 
 {% endblock %}

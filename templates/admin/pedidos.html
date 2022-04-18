@@ -13,17 +13,18 @@
         <br>
         <br>
         <table class='tabla1'>
-
             <thead>
                 <tr>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
                     <th>Sabor</th>
-                    <th>Base</th>
                     <th>Tamaño</th>
-                    <th>Cantidad de nicotina</th>
+                    <th>Base</th>
+                    <th>Nivel de Nicotina</th>
+                    <th>Pago</th>
                     <th>Pedido terminado</th>
                 </tr>
             </thead>
-
             <tbody>
                 {% for orden in ordenes %}
                 <tr>
@@ -37,18 +38,9 @@
                     <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Pedido terminado</a></td>
                 </tr>
                 {% endfor %}
-
             </tbody>
-            
         </table>
-
-        <br>
-
-        
+        <br>   
     </div>
-    
-
 </section>
-
-
 {% endblock %}
