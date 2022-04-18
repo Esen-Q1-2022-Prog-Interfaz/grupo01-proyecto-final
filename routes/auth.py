@@ -89,7 +89,14 @@ def contact():
 @login_required
 def cart():
     Orden = ordenActual.query.all()
-    return render_template("page/carrito.html", ordenes=Orden)
+    precio = 0
+    for item in Orden:
+        if item.base == "Free":
+            precio += 25
+        elif item.base == "Salt Nic":
+            precio += 15
+
+    return render_template("page/carrito.html", ordenes=Orden, precio=precio)
 
 @auth.route("/deleteCartItem/<int:Id>")
 @login_required
@@ -110,8 +117,9 @@ def enviar():
         prod = ordenActual.query.order_by(ordenActual.id).first()
         todo = ordenPendiente(info.nombre, info.direccion, info.pago, prod.sabor, prod.base, prod.tamaño, prod.nic)
         db.session.add(todo)
-        db.session.commit()
         db.session.delete(prod)
+        db.session.commit()
+        
     db.session.delete(info)
     db.session.commit()
-    return  redirect(url_for("auth.cart"))
+    return  redirect(url_for("auth.home"))

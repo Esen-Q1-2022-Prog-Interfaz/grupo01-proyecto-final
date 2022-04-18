@@ -11,9 +11,12 @@
     <div class="cen">
         <div class="intro">
             <h5>CARRITO DE COMPRAS</h5>
+            {% if current_user.username %} </a> {% else %} *Tienes que iniciar sesión para hacer una compra {% endif %}
         </div>
         <br>
+
         <br>
+
         <table class='tabla_1'>
 
             <thead>
@@ -39,7 +42,10 @@
             </tbody>
         </table>
         <br>
-        <a class = "boton_car" href="{{ url_for('admin.enviar') }}">Finalizar</a>
+        <a class = "boton_car"> Total: {{precio}} </a>
+        {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Añadir detalles de envío</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
+
+
     </div>
 
 

@@ -8,6 +8,7 @@ from models.catalogo import Catalogo
 from models.ordenActual import ordenActual
 from forms.OrderResumme import OrderRessume
 from models.ordenPendiente import ordenPendiente
+from routes.auth import auth
 
 orders = Blueprint("orders", __name__, url_prefix="/orders")
 
@@ -28,7 +29,7 @@ def create():
         newOrder = Order(usuario, nombre, direccion, pago)
         db.session.add(newOrder)
         db.session.commit()
-        return redirect(url_for("orders.OrderDetails"))
+        return redirect(url_for("admin.enviar"))
     return render_template("orders/create.html", form=form)
 
 
