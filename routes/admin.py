@@ -79,7 +79,7 @@ def deleteMessage(Id):
 @login_required
 def pedidos():
     ordenes = ordenPendiente.query.all()
-    return render_template("admin/pedidos.html", ordenes=ordenes)
+    return redirect(url_for("admin.pedidos"))
 
 @admin.route("/EnviarOrden")
 @login_required
