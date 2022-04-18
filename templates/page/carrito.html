@@ -36,25 +36,14 @@
                     <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Eliminar</a></td>
                 </tr>
                 {% endfor %}
-
             </tbody>
-            
         </table>
-
         <br>
-<<<<<<< HEAD
     </div>
-    
-    <a class = "boton_car" href="{{ url_for('auth.home') }}">Enviar pedido</a>
-=======
+    <a class = "boton_car" href="{{ url_for('admin.enviar') }}">Enviar pedido NUEVO</a>
 
-        <a class = "b2" href="{{ url_for('admin.enviar', Id=order.id) }}">Enviar pedido</a>
->>>>>>> 2ce15a7f2f22de3cf31558eae8d15046797ef87a
 
-        
-    
-   
-    
+
 
 </section>
 

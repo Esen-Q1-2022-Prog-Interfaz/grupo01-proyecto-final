@@ -25,12 +25,15 @@
             </thead>
 
             <tbody>
-                {% for orden in orden %}
+                {% for orden in ordenes %}
                 <tr>
+                    <td>{{ orden.nombre }}</td>
+                    <td>{{ orden.direccion }}</td>
                     <td>{{ orden.sabor }}</td>
-                    <td>{{ orden.base }}</td>
                     <td>{{ orden.tamaño }}</td>
+                    <td>{{ orden.base }}</td>
                     <td>{{ orden.nic }}</td>
+                    <td>{{ orden.pago }}</td>
                     <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Pedido terminado</a></td>
                 </tr>
                 {% endfor %}
@@ -43,7 +46,6 @@
 
         
     </div>
-   
     
 
 </section>

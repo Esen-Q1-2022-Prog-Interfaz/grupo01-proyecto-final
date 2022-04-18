@@ -10,7 +10,7 @@ class ordenPendiente(db.Model):
     tamaño = db.Column(db.Integer, nullable=False)
     nic = db.Column(db.Float, nullable=False)
 
-    def __init__(self,direccion, pago, nombre, sabor, base, tamaño, nic) -> None:
+    def __init__(self, direccion, pago, nombre, sabor, base, tamaño, nic) -> None:
         
         self.direccion = direccion
         self.pago = pago
@@ -21,4 +21,4 @@ class ordenPendiente(db.Model):
         self.nic = nic
 
     def __repr__(self) -> str:
-        return f"Order({self.id}, '{self.sabor}', {self.nic}, '{self.base}',{self.tamaño},{self.nombre}, '{self.direccion}',{self.pago})" 
+        return f"Order({self.id}, '{self.sabor}', {self.nic}, '{self.base}', {self.tamaño}, {self.nombre}, '{self.direccion}',{self.pago})" 

@@ -1,5 +1,4 @@
 from db.db import db
-from datetime import date 
 
 
 class Order(db.Model):

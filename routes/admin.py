@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from forms.catalogoForm import CatalogoForm
 from forms.catalogoFormUpdate import CatalogoFormUpdate
 from forms.contactForm import messageForm
-
+from models.ordenPendiente import ordenPendiente
 from models.catalogo import Catalogo
 from models.contact import Message
 from models.ordenActual import ordenActual
@@ -75,5 +75,5 @@ def deleteMessage(Id):
 @admin.route("/pedidos", methods=["GET", "POST"])
 @login_required
 def pedidos():
-    orden = ordenActual.query.all()
-    return render_template("admin/pedidos.html", orden=orden)
+    ordenes = ordenPendiente.query.all()
+    return render_template("admin/pedidos.html", ordenes=ordenes)
