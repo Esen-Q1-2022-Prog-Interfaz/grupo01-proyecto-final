@@ -162,7 +162,6 @@ span1{
     margin-top: -160px;
 }   
 
-
 form{
     background-color: transparent;
     font-size:30px;
@@ -173,11 +172,10 @@ form label{
     background-color: transparent;
     padding: 15px;
 }
-
-input,textarea, select, button {
-    margin: 10px;
+input,textarea, button {
+    margin: 8px;
     display: inline-block;
-    padding: 8px 10px;
+    padding: 8px 8px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;	
@@ -196,10 +194,11 @@ input,textarea, select, button {
     text-align: center;	
     text-decoration: none;
     outline: none;
-    color: #fff;
     border: none;
     border-radius: 15px;
     margin-right: auto;
+    background-color: white;
+    color: black;
 }
 .centrado{
     align-items: center;
@@ -600,10 +599,6 @@ div.warning p{
     background: #444;
  }
 
-.boton{
-    background-color: black;
-    color: white;
-}
 
 .b2{
   border: 2px solid white;
@@ -716,4 +711,7 @@ button {
     margin-bottom:10px;
     box-sizing: border-box;
     background-color: black;
+}
+.boton:hover{
+    color: #546666;
 }

@@ -31,7 +31,7 @@
                     <td>{{ item.tamaño }}</td>
                     <td>{{ item.nic }}</td> 
                     <td>{{ item.stock }}</td>
-                    <td><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
+                    <td class="add"><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
