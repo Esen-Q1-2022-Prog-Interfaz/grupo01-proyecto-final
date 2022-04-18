@@ -74,7 +74,6 @@
         </div>
     </div>
 </section>
-    <br>
 
 <section id='Home' class="banner2">
     <div>
@@ -97,7 +96,7 @@
             </thead>
             <tbody>
                 {% for item in items %}
-                    {% if item.base == "Salt"%}
+                    {% if item.base == "Salt Nic"%}
                         <tr>
                             <td>{{ item.sabor }}</td>
                             <td>{{ item.descripcion }}</td>
@@ -113,7 +112,40 @@
             </tbody>
         </table>
     </div>
-
+    <div class="float_right">
+        <div class="container_form">
+            <h1>Añadir Sabor</h1>
+            <form action="{{ url_for('admin.create') }}" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.sabor.label }}
+                <br>
+                {{ form.sabor }}
+                <br>
+                {{ form.descripcion.label }}
+                <br>
+                {{ form.descripcion }}
+                <br>
+                {{ form.base.label }}
+                <br>
+                {{ form.base }}
+                <br>
+                {{ form.tamaño.label }}
+                <br>
+                {{ form.tamaño }}
+                <br>
+                {{ form.nic.label }}
+                <br>
+                {{ form.nic }}
+                <br>
+                {{ form.stock.label }}
+                <br>
+                {{ form.stock }}
+                <br>
+                {{ form.submit }}
+                <br>
+            </form>
+        </div>
+    </div>
     
 </section>
 

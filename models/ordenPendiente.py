@@ -10,11 +10,11 @@ class ordenPendiente(db.Model):
     tamaño = db.Column(db.Integer, nullable=False)
     nic = db.Column(db.Float, nullable=False)
 
-    def __init__(self, direccion, pago, nombre, sabor, base, tamaño, nic) -> None:
+    def __init__(self, direccion, nombre, pago, sabor, base, tamaño, nic) -> None:
         
         self.direccion = direccion
-        self.pago = pago
         self.nombre = nombre
+        self.pago = pago
         self.sabor = sabor
         self.base = base
         self.tamaño = tamaño

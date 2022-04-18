@@ -99,35 +99,19 @@ def deleteCartItem(Id):
     db.session.commit()
     return redirect(url_for("auth.cart"))
 
-# @admin.route("/EnviarOrden/<int:Id>")
-# @login_required
-# def enviar(Id):
-#     currentProduct = ordenActual.query.filter_by(id=Id).first()
-#     currentOrder = Order.query.filter_by(id=Id).first()
-#     nombre = currentOrder.nombre
-#     direccion = currentOrder.direccion
-#     pago = currentOrder.pago
-#     sabor = currentProduct.sabor
-#     base = currentProduct.base
-#     tamano = currentProduct.tamaño
-#     nic = currentProduct.nic
-#     producto = ordenPendiente(sabor,base,tamano,nic)
-#     datos = ordenPendiente(nombre,direccion, pago)
-#     db.session.add(producto)
-#     db.session.add(datos)
-#     db.session.commit()
-#     return redirect(url_for("auth.home", id=Order.id))
-
 @admin.route("/EnviarOrden")
 @login_required
 def enviar():
 
     keys = db.inspect(ordenActual).columns.keys()
-    for key in keys:
+    llaves = len(keys)
+    info = Order.query.order_by(Order.id).first()
+    for key in range(2,llaves):
         prod = ordenActual.query.order_by(ordenActual.id).first()
-        info = Order.query.order_by(Order.id).first()
-        todo = ordenPendiente(info.direccion, info.nombre, info.pago, prod.sabor, prod.base, prod.tamaño, prod.nic)
+        todo = ordenPendiente(info.nombre, info.direccion, info.pago, prod.sabor, prod.base, prod.tamaño, prod.nic)
         db.session.add(todo)
         db.session.commit()
+        db.session.delete(prod)
+    db.session.delete(info)
+    db.session.commit()
     return  redirect(url_for("auth.cart"))
-
