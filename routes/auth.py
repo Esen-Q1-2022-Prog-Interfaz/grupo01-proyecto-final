@@ -96,3 +96,11 @@ def cart():
         elif item.base == "Salt Nic":
             precio += 15
     return render_template("page/carrito.html", ordenes=Orden, precio=precio)
+
+@auth.route("/deleteCartItem/<int:Id>")
+@login_required
+def deleteCartItem(Id):
+    currentCartItem = ordenActual.query.filter_by(id=Id).first()
+    db.session.delete(currentCartItem)
+    db.session.commit()
+    return redirect(url_for("auth.cart"))
