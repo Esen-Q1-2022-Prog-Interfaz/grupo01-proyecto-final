@@ -42,7 +42,7 @@
         <div class="intro">
             <p class="total"> El total de su compra es: <a>${{precio}}</a></p> 
         </div>
-        {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Finalizar pedido</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
+        {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Finalizar</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
 
 
     </div>
