@@ -646,9 +646,12 @@ div.warning p{
     color: black;
 }
 .intro {
-    text-align: center;
     margin-top: 10px;
+    text-align: center;
+    margin-left: 45%;
+
 }
+
 .tabla_1{
     margin-left: 18%;
 }
