@@ -151,9 +151,6 @@ p{
     align-items: center;
 }
 
-.cen{
-    z-index: 1;
-}
 span1{
     color: aqua;
     background-color: inherit;
@@ -633,7 +630,9 @@ div.warning p{
 .boton_car {
     margin: 15px;
     display: inline-block;
-    padding: 15px 25px;
+    padding-left: 25px;
+    padding-right: 35px;
+    padding:15px;
     font-size: 24px;
     cursor: pointer;
     text-align: center;	
@@ -641,17 +640,35 @@ div.warning p{
     outline: none;
     border: none;
     border-radius: 15px;
-    margin-left: 42%;
+    justify-content: center;
     background-color: white;
     color: black;
+    width: 110px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
+
+.cen{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 125px;
+    padding-right: 125px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    align-items: center;
+}
+
 .intro {
-    margin-top: 10px;
+    padding-top: 10px;
     text-align: center;
+    background:transparent;
 }
 
 .tabla_1{
-    margin-left: 18%;
+    margin: 0 auto;
+    z-index: 2;
 }
 
 .tabla_1 th {
@@ -742,4 +759,18 @@ button {
     font-size: 35px;
     color: #fff;
     background-color: black;
+    
+}
+
+.banner_car:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: rgb(22, 33, 43);
+    opacity: 0.5;  
 }
