@@ -102,7 +102,7 @@ p{
     display: flex;
     align-items: center;
 
-    background-image: url("fondo.png");
+    background:linear-gradient(to right, black,#585858); 
     background-position: center left;
     background-size: cover;
 
@@ -807,4 +807,61 @@ button {
     width: 110px;
     margin-left: 50%;
     transform: translateX(-50%)
+}
+
+.boton_catalogo1 {
+    margin: 15px;
+    display: scroll;
+    position:fixed;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    left:0px;
+}
+
+.boton_catalogo2 {
+    margin: 15px;
+    display: scroll;
+    position:fixed;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    left:10px;
+    top:300px;
+}
+.total a{
+    color:aqua;
+    font-size: 29px;
+}
+.total p{
+    font-size:30px;
+}
+.total{
+    font-family: 'Roboto', sans-serif;
+}
+
+.boton_carrito {
+    margin: 0px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    left:0px;
 }

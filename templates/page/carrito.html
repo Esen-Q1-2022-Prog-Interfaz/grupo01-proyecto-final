@@ -10,9 +10,11 @@
 <section id='Home' class="banner_car">
     <div class="cen">
         <div class="intro">
-            <br>
             <h5>Carrito de compras</h5>
-            {% if current_user.username %} </a> {% else %} *Tienes que iniciar sesión para hacer una compra {% endif %}
+            {% if current_user.username %} </a> {% else %} *Recuerda que debes iniciar sesión para finalizar tu pedido {% endif %}
+        </div>
+        <div class="container">
+            <a class="boton_carrito" href="{{ url_for('orders.OrderDetails') }}">Elegir más productos</a>
         </div>
         <br>
         <br>
@@ -40,8 +42,10 @@
             </tbody>
         </table>
         <br>
-        <a class = "boton_car"> Total: {{precio}} </a>
-        {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Añadir detalles de envío</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
+        <div class="intro">
+            <p class="total"> El total de su compra es: <a>${{precio}}</a></p> 
+        </div>
+        {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Finalizar</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
 
 
     </div>
