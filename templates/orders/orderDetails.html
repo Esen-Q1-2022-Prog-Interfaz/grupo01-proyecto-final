@@ -9,7 +9,9 @@
         <p>17ml salt nic $15</p>
         <p>Sin importar el nivel de nic ni el sabor</p>
         <br>
-        
+        <div class="container">
+            <a class="boton" href="{{ url_for('auth.cart') }}">Ir a carrito</a>
+        </div>
         <div class="contenedor_order">
             <table class='tabla1'>
                 <thead>
@@ -40,38 +42,6 @@
                     {% endfor %}
                 </tbody>
             </table>
-        <div class="container">
-            <a class="boton" href="{{ url_for('auth.cart') }}">Ir a carrito</a>
-        </div>
-        <table class='tabla1'>
-            <thead>
-                <tr>
-                    <th>Sabor</th>
-                    <th>Descripción</th>
-                    <th>Base</th>
-                    <th>Tamaño</th>
-                    <th>Nic</th>
-                    <th>Stock</th>
-                    <th>Add to Order</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                {% for item in items %}
-                    {% if item.base == "Free"%}
-                        <tr>
-                            <td>{{ item.sabor }}</td>
-                            <td>{{ item.descripcion }}</td>
-                            <td>{{ item.base }}</td>
-                            <td>{{ item.tamaño }}</td>
-                            <td>{{ item.nic }}</td> 
-                            <td>{{ item.stock }}</td>
-                            <td class="add"><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
-                        </tr>
-                    {% endif %}
-                {% endfor %}
-            </tbody>
-        </table>
 
             <table class='tabla1'>
                 <thead>
