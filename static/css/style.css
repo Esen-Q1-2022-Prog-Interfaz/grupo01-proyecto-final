@@ -808,3 +808,13 @@ button {
     margin-left: 50%;
     transform: translateX(-50%)
 }
+.total a{
+    color:aqua;
+    font-size: 29px;
+}
+.total p{
+    font-size:30px;
+}
+.total{
+    font-family: 'Roboto', sans-serif;
+}
