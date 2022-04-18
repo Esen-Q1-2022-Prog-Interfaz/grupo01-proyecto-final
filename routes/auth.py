@@ -109,11 +109,11 @@ def deleteCartItem(Id):
 @admin.route("/EnviarOrden")
 @login_required
 def enviar():
-
     keys = db.inspect(ordenActual).columns.keys()
     llaves = len(keys)
+    llaves -= 2
     info = Order.query.order_by(Order.id).first()
-    for key in range(2,llaves):
+    for key in range(llaves):
         prod = ordenActual.query.order_by(ordenActual.id).first()
         todo = ordenPendiente(info.nombre, info.direccion, info.pago, prod.sabor, prod.base, prod.tamaño, prod.nic)
         db.session.add(todo)
