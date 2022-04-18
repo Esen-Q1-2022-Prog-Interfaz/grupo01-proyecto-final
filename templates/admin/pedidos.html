@@ -37,7 +37,7 @@
                     <td>{{ orden.base }}</td>
                     <td>{{ orden.nic }}</td>
                     <td>{{ orden.pago }}</td>
-                    <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Pedido terminado</a></td>
+                    <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Finalizar</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
