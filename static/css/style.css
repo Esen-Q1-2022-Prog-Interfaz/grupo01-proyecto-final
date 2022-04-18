@@ -808,3 +808,36 @@ button {
     margin-left: 50%;
     transform: translateX(-50%)
 }
+
+.boton_catalogo1 {
+    margin: 15px;
+    display: scroll;
+    position:fixed;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    left:0px;
+}
+
+.boton_catalogo2 {
+    margin: 15px;
+    display: scroll;
+    position:fixed;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    left:10px;
+    top:300px;
+}
