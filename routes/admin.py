@@ -1,7 +1,7 @@
 from turtle import update
 from flask import Blueprint, render_template, redirect, url_for
 from flask_login import current_user, login_required
-from forms.catalogoform import CatalogoForm
+from forms.catalogoForm import CatalogoForm
 from forms.catalogoFormUpdate import CatalogoFormUpdate
 from forms.contactForm import messageForm
 from models.ordenPendiente import ordenPendiente
