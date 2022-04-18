@@ -10,7 +10,7 @@ class OrderCreateForm(FlaskForm):
         validators=[
             InputRequired(),
         ],
-        render_kw={"placeholder": "nombre"},
+        render_kw={"placeholder": "Nombre"},
     )
 
     direccion = StringField(
@@ -25,9 +25,9 @@ class OrderCreateForm(FlaskForm):
         validators=[
             InputRequired(),
         ],
-        render_kw={"placeholder": "metodo de pago"},
+        render_kw={"placeholder": "Método de pago"},
     )
 
 
 
-    submit = SubmitField("create")
+    submit = SubmitField("Create")
