@@ -2,10 +2,9 @@
 {% block title %}Catálogo - AVJ{% endblock %}
 {% block contents %}
 
-<section id='Home' class="banner2">
+<section id='Home' class="catalogo">
     <div>
         <br>
-        <h1>FREE BASE</h1>
         <p>100ml freebase $25</p>
         <p>17ml salt nic $15</p>
         <p>Sin importar el nivel de nic ni el sabor</p>
@@ -32,13 +31,13 @@
                     <td>{{ item.tamaño }}</td>
                     <td>{{ item.nic }}</td> 
                     <td>{{ item.stock }}</td>
-                    <td><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
+                    <td class="add"><a href="{{ url_for('orders.add', Id=item.id) }}" method = "post">{{ form.hidden_tag() }}{{ form.submit }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
-    <div class="float_right">
+    <!--<div class="float_right">
         <div class="container_form">
             <h1>Su orden es: </h1>
             <table class='tabla1'>
@@ -64,6 +63,6 @@
         </div>
     </div>
 </section>
-    <br>
+    <br>-->
 
 {% endblock %}

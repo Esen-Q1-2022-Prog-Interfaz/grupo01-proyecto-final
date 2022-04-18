@@ -5,7 +5,6 @@
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    background-color: black;
 }
 
 header{
@@ -87,7 +86,7 @@ p{
     display: flex;
     align-items: center;
 
-    background-image: url("https://media.istockphoto.com/photos/vaping-eliquid-from-an-electronic-cigarette-picture-id1199485567?k=20&m=1199485567&s=170667a&w=0&h=AFgGPV0J52DlciAOshrbOVpcJY0D8-SzQIoazuOTEos=");
+    background-image: url("fondo.png");
     background-position: center left;
     background-size: cover;
 
@@ -102,7 +101,7 @@ p{
     display: flex;
     align-items: center;
 
-    background-image: url("https://media.istockphoto.com/photos/vaping-eliquid-from-an-electronic-cigarette-picture-id1199485567?k=20&m=1199485567&s=170667a&w=0&h=AFgGPV0J52DlciAOshrbOVpcJY0D8-SzQIoazuOTEos=");
+    background-image: url("fondo.png");
     background-position: center left;
     background-size: cover;
 
@@ -162,24 +161,15 @@ span1{
 }
 
 .container_form{
-    max-width: 1600px;
+    max-width: 100%;
     margin: 0 auto;
     margin-right: 0;
-    position: relative;
-    top: -130px;
     text-align: center;
     width: 100%;
     z-index: 1;
     background-color: transparent;
+    margin-top: -160px;
 }   
-
-
-.container_form h1{
-    background-color: inherit;
-    font-size: 45px;
-    padding-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-}
 
 form{
     background-color: transparent;
@@ -189,17 +179,20 @@ form{
 
 form label{
     background-color: transparent;
-    padding: 10px;
+    padding: 15px;
 }
-
-input, textarea, select, button {
-    width : 150px;
-    margin: 0;
-    padding: 2px;
-    font-size: 25px;
-    margin-bottom:10px;
-    box-sizing: border-box;
-    background-color: black;
+input,textarea, button {
+    margin: 8px;
+    display: inline-block;
+    padding: 8px 8px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
 }
 .boton {
     margin: 15px;
@@ -210,10 +203,11 @@ input, textarea, select, button {
     text-align: center;	
     text-decoration: none;
     outline: none;
-    color: #fff;
     border: none;
     border-radius: 15px;
     margin-right: auto;
+    background-color: white;
+    color: black;
 }
 .centrado{
     align-items: center;
@@ -242,6 +236,10 @@ div.contenedor{
     height: 400px;
     overflow: hidden;
     background-color: transparent;
+}
+
+.cuerpoHome{
+    background-color:black;
 }
 
 div.itemCarrusel{
@@ -283,7 +281,7 @@ a i{
 }
 
 a i:hover{
-    color: #C7D8D8;
+    color: aqua;
 }
 .companytitulo h3{
     text-align: center;
@@ -291,31 +289,41 @@ a i:hover{
     padding-bottom: 20px;
 }
 
+.about{
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
 .aboutus{
     align-items: center;
+    align-content: center;
 }
 
 .font{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    align-items: center;
+    text-align: center;
 }
 
 .containercard{
     align-items: center;
-    justify-content: center;
     height: 275px;
     background: black;
-    padding-left: 200px;
+     /*padding-left: 200px;*/
     padding-bottom: 0%;
 }
 
 .card-container{
     align-items: center;
+    align-content: center;
+    padding-right: 0%;
     height: auto;
     background: black;
     border-radius: 2px;
     display: flex;
+    justify-content: center;
 }
 
 .fotoabout{
@@ -338,6 +346,10 @@ a i:hover{
     height: 300px;
     border-radius: 50%;
     padding-right: 20px;
+}
+
+.tabla1{
+    margin: 0 auto;
 }
 
 .tabla1 th {
@@ -380,7 +392,7 @@ a i:hover{
     
 }
 
-.float_right{
+/*.float_right{
     float: right;
     margin: 100px;
     margin-right: 5px;
@@ -388,7 +400,7 @@ a i:hover{
     position: relative;
     top: -250px;
     background-color: transparent;
-}
+}*/
 
 h5{
     font-size: 70px;
@@ -414,8 +426,13 @@ h5{
     padding:50px;
 }
 
-.catalogo {
+.catalogo{
     text-align: center;
+    background:linear-gradient(to right, black,#585858); 
+        /*background-image: url("fondo.jpg");
+        background-position: center left;
+        background-size: cover;*/
+    background-color: aqua;
 }
 
 h6{
@@ -444,14 +461,17 @@ h6{
 .nicotine p{
     color: red;
     font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 
 .nicotine h4{
     color: red;
     font-family: 'Roboto', sans-serif;
 }
-
-.warning p{
+.warning{
+    background-color:white;
+}
+div.warning p{
     color: black;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
@@ -462,16 +482,13 @@ h6{
     background-color: white;
 
 }
-.warning{
-    background-color: white;
 
-}
 #slider {
     margin: 0 auto;
     width: 800px;
     max-width: 150%;
     text-align: center;
- }
+}
  #slider input[type=radio] {
     display: none;
  }
@@ -481,8 +498,8 @@ h6{
  }
  #slides {
     padding: 5px;
-    border: 1px solid #ccc;
-    background: #fff;
+    /*border: 1px solid #ccc;*/
+    background: black;
     position: relative;
     z-index: 50;
  }
@@ -515,25 +532,25 @@ h6{
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: #fff;
+    color: black;
  }
  #slide-content h2{
-     color: #fff;
+     color: black;
  }
  #slides .slide_1 {
-    background: url("/static/css/imagenes/Salt/Envy\ Apple.jpeg");
+    background: url("imagenes/Salt/CaribbeanSunrise.jpeg");
     background-size: cover;
  }
  #slides .slide_2 {
-    background: url("/static/css/imagenes/Salt/Miami\ Beach.jpeg");
+    background: url("imagenes/Salt/LovePotion.jpeg");
     background-size: cover;
  }
  #slides .slide_3 {
-    background: url("/static/css/imagenes/Free/Paradise.jpeg");
+    background: url("imagenes/Salt/MiamiBeach.jpeg");
     background-size: cover;
  }
  #slides .slide_4 {
-    background: url("/static/css/imagenes/Free/Love\ Potion.jpeg");
+    background: url("imagenes/Salt/Paradise1.jpeg");
     background-size: cover;
  }
  #controls {
@@ -557,6 +574,7 @@ h6{
  #slide3:checked ~ #controls label:nth-child(4),
  #slide4:checked ~ #controls label:nth-child(1) {
     background: url("right.svg") no-repeat;
+    background-size: cover;
     float:right;
     margin: 0 -50px 0 0;
     display: block;
@@ -566,6 +584,7 @@ h6{
  #slide3:checked ~ #controls label:nth-last-child(3),
  #slide4:checked ~ #controls label:nth-last-child(2) {
      background: url("left-arrow.svg") no-repeat;
+     background-size: cover;
      float:left;
      margin: 0 0 0 -50px;
      display: block;
@@ -589,10 +608,6 @@ h6{
     background: #444;
  }
 
-.boton{
-    background-color: aqua;
-    color: black;
-}
 
 .b2{
   border: 2px solid white;
@@ -662,4 +677,50 @@ h6{
 }
 .tabla_1 tr:nth-child(even){
     background-color: black;
+}
+.footer {
+    padding: 60px 0;
+    margin-bottom: 0px;
+ }
+ .footer .social {
+    text-align: center;
+    color:#ffffff;
+ }
+ .footer .social a{
+    font-size: 15px;
+    width: 70px;
+    line-height: 20px;
+    display: inline-block;
+    text-align: center;
+ }
+ .footer .social a:hover{
+    opacity: 0.9;
+ }
+ .footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 28px;
+    color:#ffffff
+ }
+.footer .social i{
+    font-size: 38px;
+    color:#fff;
+}
+.footer .social i:hover{
+    color:aqua;
+}
+.catalogo p{
+    color: #fff;
+}
+button {
+    width : 150px;
+    margin: 0;
+    padding: 2px;
+    font-size: 25px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    background-color: black;
+}
+.boton:hover{
+    color: #546666;
 }
