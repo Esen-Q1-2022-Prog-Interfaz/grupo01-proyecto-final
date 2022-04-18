@@ -647,7 +647,7 @@ div.warning p{
 }
 .intro {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .tabla_1{
     margin-left: 18%;
@@ -725,5 +725,8 @@ button {
     background-color: black;
 }
 .boton:hover{
+    color: #546666;
+}
+.boton_car:hover{
     color: #546666;
 }
