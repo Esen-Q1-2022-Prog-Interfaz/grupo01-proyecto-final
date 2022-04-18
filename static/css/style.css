@@ -153,23 +153,14 @@ span1{
 
 .container_form{
     max-width: 1600px;
-    margin: 0 auto;
     margin-right: 0;
-    position: relative;
-    top: -130px;
     text-align: center;
     width: 100%;
     z-index: 1;
     background-color: transparent;
+    margin-top: -160px;
 }   
 
-
-.container_form h1{
-    background-color: inherit;
-    font-size: 45px;
-    padding-bottom: 10px;
-    font-family: 'Roboto', sans-serif;
-}
 
 form{
     background-color: transparent;
@@ -179,17 +170,21 @@ form{
 
 form label{
     background-color: transparent;
-    padding: 10px;
+    padding: 15px;
 }
 
-input, textarea, select, button {
-    width : 150px;
-    margin: 0;
-    padding: 2px;
-    font-size: 25px;
-    margin-bottom:10px;
-    box-sizing: border-box;
-    background-color: black;
+input,textarea, select, button {
+    margin: 10px;
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;	
+    outline: none;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    margin-right: auto;
 }
 .boton {
     margin: 15px;
@@ -711,4 +706,13 @@ div.warning p{
 }
 .catalogo p{
     color: #fff;
+}
+button {
+    width : 150px;
+    margin: 0;
+    padding: 2px;
+    font-size: 25px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+    background-color: black;
 }
