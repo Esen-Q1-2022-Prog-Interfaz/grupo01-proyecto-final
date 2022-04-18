@@ -13,6 +13,9 @@
             <h5>Carrito de compras</h5>
             {% if current_user.username %} </a> {% else %} *Recuerda que debes iniciar sesión para finalizar tu pedido {% endif %}
         </div>
+        <div class="container">
+            <a class="boton_carrito" href="{{ url_for('orders.OrderDetails') }}">Elegir más productos</a>
+        </div>
         <br>
         <br>
         <table class='tabla_1'>

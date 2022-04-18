@@ -851,3 +851,17 @@ button {
 .total{
     font-family: 'Roboto', sans-serif;
 }
+
+.boton_carrito {
+    margin: 0px;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    left:0px;
+}
