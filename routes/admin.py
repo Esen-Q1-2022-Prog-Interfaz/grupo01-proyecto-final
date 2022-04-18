@@ -84,12 +84,12 @@ def pedidos():
 @admin.route("/EnviarOrden")
 @login_required
 def enviar():
-    import sqlalchemy as db
-    engine = db.create_engine("mysql://b1dfe25bebd0d5:babacb3a@us-cdbr-east-05.cleardb.net/heroku_653f8e9ae84c59d")
-    meta_data = db.MetaData(bind=engine)
-    db.MetaData.reflect(meta_data)
+    import sqlalchemy as dbe
+    engine = dbe.create_engine("mysql://b1dfe25bebd0d5:babacb3a@us-cdbr-east-05.cleardb.net/heroku_653f8e9ae84c59d")
+    meta_data = dbe.MetaData(bind=engine)
+    dbe.MetaData.reflect(meta_data)
     actor_table = meta_data.tables['orden_actual']
-    result = db.select([db.func.count()]).select_from(actor_table).scalar()
+    result = dbe.select([dbe.func.count()]).select_from(actor_table).scalar()
     info = Order.query.order_by(Order.id).first()
 
     for row in range(result):
