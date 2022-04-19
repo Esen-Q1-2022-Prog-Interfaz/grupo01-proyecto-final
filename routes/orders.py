@@ -22,11 +22,10 @@ def CreateOrder():
 def create():
     form = OrderCreateForm()
     if form.validate_on_submit():
-        usuario = current_user
         nombre = form.nombre.data
         direccion = form.direccion.data
         pago = form.pago.data
-        newOrder = Order(usuario, nombre, direccion, pago)
+        newOrder = Order("", nombre, direccion, pago)
         db.session.add(newOrder)
         db.session.commit()
         return redirect(url_for("admin.enviar"))

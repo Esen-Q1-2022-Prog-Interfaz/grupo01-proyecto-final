@@ -13,6 +13,7 @@ from routes.admin import admin
 from models.ordenActual import ordenActual
 
 
+
 auth = Blueprint("auth", __name__)
 
 
@@ -72,14 +73,15 @@ def catalogo():
 
 @auth.route("/contact", methods=["GET", "POST"])
 def contact():
+    from datetime import date
+    today = date.today()
     form = messageForm()
     if form.validate_on_submit():
         name = form.name.data
         email = form.email.data
         subject = form.subject.data
         message = form.message.data
-        date = form.date.data
-        newMessage = Message(name, email, subject, message, date)
+        newMessage = Message(name, email, subject, message, today)
         db.session.add(newMessage)
         db.session.commit()
         return redirect(url_for("auth.home"))

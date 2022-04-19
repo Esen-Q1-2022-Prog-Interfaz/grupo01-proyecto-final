@@ -14,34 +14,37 @@
         </div>
         <br>
         <br>
-        <table class='tabla_1'>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Dirección</th>
-                    <th>Sabor</th>
-                    <th>Tamaño</th>
-                    <th>Base</th>
-                    <th>Nivel de Nicotina</th>
-                    <th>Pago</th>
-                    <th>Pedido terminado</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for orden in ordenes %}
-                <tr>
-                    <td>{{ orden.nombre }}</td>
-                    <td>{{ orden.direccion }}</td>
-                    <td>{{ orden.sabor }}</td>
-                    <td>{{ orden.tamaño }}</td>
-                    <td>{{ orden.base }}</td>
-                    <td>{{ orden.nic }}</td>
-                    <td>{{ orden.pago }}</td>
-                    <td><a href="{{ url_for('admin.finalizar', Id=orden.id) }}">Finalizar</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        {% if ordenes%}
+            <table class='tabla_1'>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Sabor</th>
+                        <th>Tamaño</th>
+                        <th>Base</th>
+                        <th>Nivel de Nicotina</th>
+                        <th>Pago</th>
+                        <th>Pedido terminado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for orden in ordenes %}
+                    <tr>
+                        <td>{{ orden.nombre }}</td>
+                        <td>{{ orden.direccion }}</td>
+                        <td>{{ orden.sabor }}</td>
+                        <td>{{ orden.tamaño }}</td>
+                        <td>{{ orden.base }}</td>
+                        <td>{{ orden.nic }}</td>
+                        <td>{{ orden.pago }}</td>
+                        <td><a href="{{ url_for('admin.finalizar', Id=orden.id) }}">Finalizar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %} <div class="intro">    <h3>No hay pedidos pendientes </h3>     </div>
+        {% endif %}
         <br>   
     </div>
 </section>

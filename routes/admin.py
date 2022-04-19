@@ -59,7 +59,7 @@ def update(Id):
         db.session.add(currentProduct)
         db.session.commit()
         return redirect(url_for("admin.create"))
-    return render_template("admin/update.html", Id=Id,form=form, item=currentProduct)
+    return render_template("admin/update.html", Id=Id ,form=form, item=currentProduct)
 
 @admin.route("/contact", methods=["GET", "POST"])
 @login_required
@@ -79,7 +79,7 @@ def deleteMessage(Id):
 @login_required
 def pedidos():
     ordenes = ordenPendiente.query.all()
-    return render_template("admin/pedidos.html")
+    return render_template("admin/pedidos.html", ordenes=ordenes)
 
 @admin.route("/EnviarOrden")
 @login_required
@@ -110,13 +110,13 @@ def enviar():
 @admin.route("/finalizar/<int:Id>")
 @login_required
 def finalizar(Id):
-    ordenes = ordenPendiente.query.all()
     ahora = date.today()
     product = ordenPendiente.query.filter_by(id=Id).first()
-    rep = Reporte(product.nombre, product.direccion, product.pago, product.sabor, product.base, product.tamaño, product.nic, ahora)
+    rep = Reporte(product.direccion, product.nombre, product.pago, product.sabor, product.base, product.tamaño, product.nic, ahora)
     db.session.add(rep)
     db.session.delete(product)
     db.session.commit()
+    ordenes = ordenPendiente.query.all()
     return render_template("admin/pedidos.html", ordenes=ordenes)
 
 

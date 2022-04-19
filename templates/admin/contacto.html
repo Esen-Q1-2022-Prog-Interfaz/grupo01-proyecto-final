@@ -9,33 +9,35 @@
         </div>
         <br>
         <br>
-        <table class='tabla_1'>
+        {% if mensajes%}
+            <table class='tabla_1'>
 
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Objeto</th>
-                    <th>Mensaje</th>
-                    <th>Fecha</th>
-                    <th>Leído</th>
-                </tr>
-            </thead>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Objeto</th>
+                        <th>Mensaje</th>
+                        <th>Fecha</th>
+                        <th>Leído</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                {% for mensaje in mensajes %}
-                <tr>
-                    <td>{{ mensaje.name }}</td>
-                    <td>{{ mensaje.email }}</td>
-                    <td>{{ mensaje.subject }}</td>
-                    <td>{{ mensaje.message }}</td>
-                    <td>{{ mensaje.date }}</td>
-                    <td><a href="{{ url_for('admin.deleteMessage', Id=mensaje.id) }}">Leído</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-            
-        </table>
+                <tbody>
+                    {% for mensaje in mensajes %}
+                    <tr>
+                        <td>{{ mensaje.name }}</td>
+                        <td>{{ mensaje.email }}</td>
+                        <td>{{ mensaje.subject }}</td>
+                        <td>{{ mensaje.message }}</td>
+                        <td>{{ mensaje.date }}</td>
+                        <td><a href="{{ url_for('admin.deleteMessage', Id=mensaje.id) }}">Leído</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %} <div class="intro">    <h3>No hay mensajes pendientes </h3>     </div>
+        {% endif %}
     </div>
 
 </section>

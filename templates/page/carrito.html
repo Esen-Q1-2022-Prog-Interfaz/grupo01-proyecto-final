@@ -18,34 +18,40 @@
         </div>
         <br>
         <br>
-        <table class='tabla_1'>
-            <thead>
-                <tr>
-                    <th>Sabor</th>
-                    <th>Base</th>
-                    <th>Tamaño</th>
-                    <th>Cantidad de nicotina</th>
-                    <th>Eliminar del carrito</th>
-                </tr>
-            </thead>
+        {% if ordenes%}
+            <table class='tabla_1'>
+                <thead>
+                    <tr>
+                        <th>Sabor</th>
+                        <th>Base</th>
+                        <th>Tamaño</th>
+                        <th>Cantidad de nicotina</th>
+                        <th>Eliminar del carrito</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                {% for orden in ordenes %}
-                <tr>
-                    <td>{{ orden.sabor }}</td>
-                    <td>{{ orden.base }}</td>
-                    <td>{{ orden.tamaño }}</td>
-                    <td>{{ orden.nic }}</td>
-                    <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Eliminar</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <br>
-        <div class="intro">
+                <tbody>
+                    {% for orden in ordenes %}
+                    <tr>
+                        <td>{{ orden.sabor }}</td>
+                        <td>{{ orden.base }}</td>
+                        <td>{{ orden.tamaño }}</td>
+                        <td>{{ orden.nic }}</td>
+                        <td><a href="{{ url_for('auth.deleteCartItem', Id=orden.id) }}">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="intro">
+                <br>
             <p class="total"> El total de su compra es: <a>${{precio}}</a></p> 
+            {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Finalizar</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
         </div>
-        {% if current_user.username %} <a class = "boton_car" href="{{ url_for('orders.create') }}">Finalizar</a> {% else %} <a class = "boton_car" href="{{ url_for('auth.login') }}">Login</a> {% endif %}
+            {% else %} <div class="intro">    <h3>No hay nada en el carrito </h3>     </div>
+            {% endif %}
+        <br>
+        
+        
 
 
     </div>

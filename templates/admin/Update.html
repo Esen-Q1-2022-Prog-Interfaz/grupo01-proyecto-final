@@ -13,12 +13,9 @@
                     <th>Tamaño</th>
                     <th>Nic</th>
                     <th>Stock</th>
-                    <th>Delete</th>
-                    <th>Update</th>
                 </tr>
             </thead>
             <tbody>
-                {% for item in items %}
                 <tr>
                     <td>{{ item.sabor }}</td>
                     <td>{{ item.descripcion }}</td>
@@ -26,33 +23,15 @@
                     <td>{{ item.tamaño }}</td>
                     <td>{{ item.nic }}</td>
                     <td>{{ item.stock }}</td>
-                    <td><a href="{{ url_for('admin.delete', Id=item.id) }}">Delete Flavor</a></td>
-                    <td><a href="{{ url_for('admin.update', Id=item.id) }}">Update Stock</a></td>
                 </tr>
-                {% endfor %}
             </tbody>
         </table>
     </div>
 
     <div class="container_form">
         <h1>Editar Catálogo</h1>
-        <form action="{{ url_for('admin.create') }}" method="post">
+        <form action="{{ url_for('admin.update', Id=item.id) }}" method="post">
             {{ form.hidden_tag() }}
-            {{ form.sabor.label }}
-            {{ form.sabor }}
-            <br>
-            {{ form.descripcion.label }}
-            {{ form.descripcion }}
-            <br>
-            {{ form.base.label }}
-            {{ form.base }}
-            <br>
-            {{ form.tamaño.label }}
-            {{ form.tamaño }}
-            <br>
-            {{ form.nic.label }}
-            {{ form.nic }}
-            <br>
             {{ form.stock.label }}
             {{ form.stock }}
             <br>
@@ -60,6 +39,7 @@
             <br>
         </form>
     </div>
+
 </section>
 
 {% endblock %}

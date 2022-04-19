@@ -3,7 +3,7 @@ from db.db import db
 
 class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    usuario = db.Column(db.String(50), nullable=False)
+    usuario = db.Column(db.String(50), nullable=True)
     nombre = db.Column(db.String(50), nullable=False)
     direccion = db.Column(db.String(50), nullable=False)
     pago = db.Column(db.String(50), nullable=False)
