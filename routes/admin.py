@@ -79,13 +79,15 @@ def deleteMessage(Id):
 @login_required
 def pedidos():
     ordenes = ordenPendiente.query.all()
-    return redirect(url_for("admin.pedidos"))
+    return render_template("admin/pedidos.html")
 
 @admin.route("/EnviarOrden")
 @login_required
 def enviar():
     import sqlalchemy as dbe
-    engine = dbe.create_engine("mysql://b1dfe25bebd0d5:babacb3a@us-cdbr-east-05.cleardb.net/heroku_653f8e9ae84c59d")
+
+    # engine = dbe.create_engine("mysql://b1dfe25bebd0d5:babacb3a@us-cdbr-east-05.cleardb.net/heroku_653f8e9ae84c59d")
+    engine = dbe.create_engine("mysql://root:root@127.0.0.1:3306/american")
     meta_data = dbe.MetaData(bind=engine)
     dbe.MetaData.reflect(meta_data)
     actor_table = meta_data.tables['orden_actual']
