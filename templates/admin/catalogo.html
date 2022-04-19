@@ -5,7 +5,9 @@
 <section id='Home' class="banner2">
     <div>
         <br>
-        <h1>Free Base</h1>
+        <div class="intro">
+            <h5>Free Base</h5>
+        </div>
         <br>
         <table class='tabla1'>
             <thead>
@@ -41,7 +43,7 @@
     </div>
     <div class="float_right">
         <div class="container_form">
-            <h1>Añadir Sabor</h1>
+            <h5>Añadir Sabor</h5>
             <form action="{{ url_for('admin.create') }}" method="post">
                 {{ form.hidden_tag() }}
                 {{ form.sabor.label }}
@@ -78,7 +80,9 @@
 <section id='Home' class="banner2">
     <div>
         <br>
-        <h1>Salt Nic</h1>
+        <div class="intro">
+            <h5>Salt Nic</h5>
+        </div>
         <br>
         <table class='tabla1'>
             <thead>
@@ -114,7 +118,7 @@
     </div>
     <div class="float_right">
         <div class="container_form">
-            <h1>Añadir Sabor</h1>
+            <h5>Añadir Sabor</h5>
             <form action="{{ url_for('admin.create') }}" method="post">
                 {{ form.hidden_tag() }}
                 {{ form.sabor.label }}

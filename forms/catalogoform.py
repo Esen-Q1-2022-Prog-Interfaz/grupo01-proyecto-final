@@ -22,7 +22,7 @@ class CatalogoForm(FlaskForm):
 
     nic = FloatField(
         validators=[InputRequired()],
-        render_kw={'placeholder':'Tamaño'})
+        render_kw={'placeholder':'Nic'})
     
     stock = IntegerField(
         validators=[InputRequired()],
