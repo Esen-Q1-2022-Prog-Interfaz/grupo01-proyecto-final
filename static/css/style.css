@@ -393,15 +393,14 @@ a i:hover{
     
 }
 
-/*.float_right{
+.float_right{
     float: right;
     margin: 100px;
     margin-right: 5px;
     margin-right: 1%;
     position: relative;
-    top: -250px;
     background-color: transparent;
-}*/
+}
 
 h5{
     font-size: 70px;
