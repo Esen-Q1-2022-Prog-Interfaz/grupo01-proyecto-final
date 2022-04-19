@@ -16,11 +16,13 @@ from datetime import date
 
 admin = Blueprint("admin", __name__, url_prefix='/admin')
 
-
+#Home del dashboard
 @admin.route("/")
 def home():
     return render_template("admin/dashboard.html")
 
+
+#Añadir nuevos productos al catalogo
 @admin.route("/create", methods=["GET", "POST"])
 @login_required
 def create():
@@ -39,6 +41,7 @@ def create():
         return redirect(url_for("admin.create"))
     return render_template("admin/catalogo.html", form=form, items=productList)
 
+#Borrar productos del catalogo
 @admin.route("/delete/<int:Id>")
 @login_required
 def delete(Id):
@@ -47,7 +50,7 @@ def delete(Id):
     db.session.commit()
     return redirect(url_for("admin.create"))
 
-
+#Update productos del catalogo
 @admin.route("/update/<int:Id>", methods=['GET', 'POST'])
 @login_required
 def update(Id):
@@ -61,12 +64,14 @@ def update(Id):
         return redirect(url_for("admin.create"))
     return render_template("admin/update.html", Id=Id ,form=form, item=currentProduct)
 
+#Ver mensajes
 @admin.route("/contact", methods=["GET", "POST"])
 @login_required
 def mensajes():
     Mensaje = Message.query.all()
     return render_template("admin/contacto.html", mensajes=Mensaje)
 
+#Borrar mensajes
 @admin.route("/leido/<int:Id>")
 @login_required
 def deleteMessage(Id):
@@ -75,12 +80,14 @@ def deleteMessage(Id):
     db.session.commit()
     return redirect(url_for("admin.mensajes"))
 
+#Ver pedidos por entregar/completar
 @admin.route("/pedidos", methods=["GET", "POST"])
 @login_required
 def pedidos():
     ordenes = ordenPendiente.query.all()
     return render_template("admin/pedidos.html", ordenes=ordenes)
 
+#Finalizar orden/reservar orden
 @admin.route("/EnviarOrden")
 @login_required
 def enviar():
@@ -106,7 +113,7 @@ def enviar():
     return  redirect(url_for("auth.home"))
 
 
-
+#Marcar orden/pedido como finalizado
 @admin.route("/finalizar/<int:Id>")
 @login_required
 def finalizar(Id):
@@ -119,31 +126,9 @@ def finalizar(Id):
     ordenes = ordenPendiente.query.all()
     return render_template("admin/pedidos.html", ordenes=ordenes)
 
-
+#Ver historial de compras/reporte
 @admin.route("/reporte")
 @login_required
 def reporte():
     ordenes = Reporte.query.all()
     return render_template("admin/reporte.html", ordenes=ordenes)
-
-
-# @admin.route("/reporte")
-# @login_required
-# def reporte():
-#     ordenes = ordenPendiente.query.all()
-#     import sqlalchemy as db
-#     engine = db.create_engine("mysql://b1dfe25bebd0d5:babacb3a@us-cdbr-east-05.cleardb.net/heroku_653f8e9ae84c59d")
-#     meta_data = db.MetaData(bind=engine)
-#     db.MetaData.reflect(meta_data)
-#     actor_table = meta_data.tables['orden_pendiente']
-#     result = db.select([db.func.count()]).select_from(actor_table).scalar()
-
-
-#     for row in range(result):
-#         product = ordenPendiente.query.order_by(ordenActual.id).first()
-#         rep = Reporte(product.nombre, product.direccion, product.pago, product.sabor, product.base, product.tamaño, product.nic, ahora)
-#         db.session.add(rep)
-#         db.session.delete(product)
-#         db.session.commit()
-    
-#    return render_template("admin/pedidos.html", ordenes=ordenes)

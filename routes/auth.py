@@ -16,12 +16,12 @@ from models.ordenActual import ordenActual
 
 auth = Blueprint("auth", __name__)
 
-
+#Home de la página
 @auth.route("/")
 def home():
     return render_template("home.html")
 
-
+#Login como usuario existente
 @auth.route("/login", methods=["GET", "POST"])
 def login():
     form = LoginForm()
@@ -39,7 +39,7 @@ def login():
                     return redirect(url_for("auth.home"))
     return render_template("login.html", form=form)
 
-
+# Register usuario nuevo
 @auth.route("/register", methods=["GET", "POST"])
 def register():
     form = RegisterForm()
@@ -53,24 +53,21 @@ def register():
         return redirect(url_for("auth.login"))
     return render_template("register.html", form=form)
 
-
+#Log out usuario actual
 @auth.route("/logout")
 def logout():
     logout_user()
     return redirect(url_for("auth.home"))
 
 
-@auth.route("/dashboard")
-@login_required
-def dashboard():
-    print(f"current_user: {current_user}")
-    return render_template("dashboard.html", user=current_user)
-
+#Renderiza el catalogo
 @auth.route("/catalogo")
 @login_required
 def catalogo():
     return render_template("page/catalogo.html")
 
+
+#Contact - Manda mensaje 
 @auth.route("/contact", methods=["GET", "POST"])
 def contact():
     from datetime import date
@@ -87,6 +84,9 @@ def contact():
         return redirect(url_for("auth.home"))
     return render_template("page/contact.html", form=form)
 
+#Carrito de compras
+
+#Muestra Carrito 
 @auth.route("/cart", methods=["GET", "POST"])
 @login_required
 def cart():
@@ -99,6 +99,7 @@ def cart():
             precio += 15
     return render_template("page/carrito.html", ordenes=Orden, precio=precio)
 
+#Elimina producto del carrito
 @auth.route("/deleteCartItem/<int:Id>")
 @login_required
 def deleteCartItem(Id):

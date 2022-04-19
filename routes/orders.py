@@ -12,11 +12,13 @@ from routes.auth import auth
 
 orders = Blueprint("orders", __name__, url_prefix="/orders")
 
+#Ingresar detalles de orden (Direccion, pago, etc)
 @orders.route("/createOrder")
 @login_required
 def CreateOrder():
     return render_template("orders/create.html")
 
+#Crear orden 
 @orders.route("/create", methods=["GET", "POST"])
 @login_required
 def create():
@@ -31,7 +33,7 @@ def create():
         return redirect(url_for("admin.enviar"))
     return render_template("orders/create.html", form=form)
 
-
+# Junta detalles de orden con Carrito
 @orders.route("/OrderDetails", methods=["GET", "POST"])
 @login_required
 def OrderDetails():
@@ -40,6 +42,7 @@ def OrderDetails():
     form = OrderRessume()
     return render_template("orders/orderDetails.html", form=form, items=productList, ordenes=TodasOrdenes)
 
+#Crea/Display el carrito
 @orders.route("/add/<int:Id>")
 @login_required
 def add(Id):
@@ -54,7 +57,7 @@ def add(Id):
     db.session.commit()
     return redirect(url_for("orders.OrderDetails", id=id))
 
-
+#Borra productos de la orden
 @orders.route("/delete/<int:Id>")
 @login_required
 def delete(Id):
