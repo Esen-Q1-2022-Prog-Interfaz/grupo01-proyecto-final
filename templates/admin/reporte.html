@@ -1,16 +1,11 @@
 {% extends 'layout_dash.html' %}
 {% block title %}Carrito de compras - AVJ{% endblock %}
 {% block contents %}
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"> 
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="manifest" href="images/site.webmanifest">
-<script src="https://kit.fontawesome.com/765c0ce282.js" crossorigin="anonymous"></script>
 
 <section id='Home' class="banner_car">
     <div class="cen">
         <div class="intro">
-            <h5>Pedidos Pendientes</h5>
+            <h5>Historial de Pedidos</h5>
         </div>
         <br>
         <br>
@@ -24,7 +19,7 @@
                     <th>Base</th>
                     <th>Nivel de Nicotina</th>
                     <th>Pago</th>
-                    <th>Pedido terminado</th>
+                    <th>Fecha</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,7 +32,7 @@
                     <td>{{ orden.base }}</td>
                     <td>{{ orden.nic }}</td>
                     <td>{{ orden.pago }}</td>
-                    <td><a href="{{ url_for('admin.finalizar', Id=orden.id) }}">Finalizar</a></td>
+                    <td>{{ orden.fecha }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -45,4 +40,5 @@
         <br>   
     </div>
 </section>
+
 {% endblock %}
